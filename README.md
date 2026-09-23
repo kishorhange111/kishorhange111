@@ -21,10 +21,9 @@ I build production ML and generative AI systems, from LLM apps, RAG and AI agent
 | [**Deep-Neural-Network-Optimization**](https://github.com/kishorhange111/Deep-Neural-Network-Optimization) | Shrinks a Keras CNN for edge devices through TFLite, ONNX and Apache TVM, with models ~12x smaller (final-year team project) | TensorFlow, TFLite, ONNX, TVM |
 | [**llm-token-visualizer**](https://github.com/kishorhange111/llm-token-visualizer) | Compares how LLM tokenizers (BERT, GPT-2, GPT-4, Phi-3, DeepSeek) split the same text | Hugging Face Transformers, Streamlit |
 | [**Classification-Of-Surnames**](https://github.com/kishorhange111/Classification-Of-Surnames) | Character-level RNN that predicts a surname's language of origin (18 languages) | PyTorch, Streamlit |
-| [**vm_energy_agent**](https://github.com/kishorhange111/vm_energy_agent) | Lightweight agent that monitors VMs, processes and threads, estimates power usage, and exports metrics and traces | Go, Prometheus, Grafana, OpenTelemetry, Docker |
 
 ### Tech stack
-- **Languages:** `Python` `Go` `SQL`
+- **Languages:** `Python` `SQL`
 - **ML / GenAI:** `PyTorch` `TensorFlow` `Hugging Face` `LangChain` `LangGraph` `CrewAI` `FAISS` `Chroma`
 - **Optimization:** `ONNX Runtime` `Optimum` `TFLite` `TVM`
 - **MLOps:** `FastAPI` `Docker` `Kubernetes` `MLflow` `Airflow` `Prometheus` `Grafana`
