@@ -4,15 +4,15 @@
     @media (max-width: 520px) { .topics { display: none; } .idle { opacity: 0.5; } }
   </style>
   <defs>
-    <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#D97757"/>
-      <stop offset="1" stop-color="#5EB1BF"/>
-    </linearGradient>
-    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="42"/></filter>
+    <radialGradient id="aurora">
+      <stop offset="0" stop-color="#D97757" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#5EB1BF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#5EB1BF" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
   <!-- ambient: one aurora wash behind the constellation (never behind the name), 36 s drift -->
-  <ellipse cx="748" cy="140" rx="170" ry="92" fill="url(#aurora)" filter="url(#blur)" opacity="0.18">
+  <ellipse cx="748" cy="140" rx="200" ry="122" fill="url(#aurora)" opacity="0.18">
     <animate attributeName="opacity" values="0.18;0.28;0.18" dur="36s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
     <animateTransform attributeName="transform" type="translate" values="-18 0;18 0;-18 0" dur="36s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
   </ellipse>

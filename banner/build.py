@@ -4,8 +4,9 @@
 
 Header: a kNN-retrieval constellation. About 40 embedding points sit in three
 clusters; every 8 s a query point appears, draws hairlines to its 5 nearest
-neighbours, holds, and fades (one retrieval step). Footer: token pills flow
-along a hairline into an <|eos|> token.
+neighbours, holds, and fades (one retrieval step). Footer: same layout and
+palette; a hairline draws token by token through the constellation until it
+reaches an <|eos|> node (one generation step).
 
 Each banner is written in a dark and a light variant, switched in the README
 with <picture>. Design rules:
@@ -140,15 +141,15 @@ def header(p):
     @media (max-width: 520px) {{ .topics {{ display: none; }} .idle {{ opacity: 0.5; }} }}
   </style>
   <defs>
-    <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="{p["aurora"][0]}"/>
-      <stop offset="1" stop-color="{p["aurora"][1]}"/>
-    </linearGradient>
-    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="42"/></filter>
+    <radialGradient id="aurora">
+      <stop offset="0" stop-color="{p["aurora"][0]}" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="{p["aurora"][1]}" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="{p["aurora"][1]}" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
   <!-- ambient: one aurora wash behind the constellation (never behind the name), 36 s drift -->
-  <ellipse cx="748" cy="140" rx="170" ry="92" fill="url(#aurora)" filter="url(#blur)" opacity="{a0}">
+  <ellipse cx="748" cy="140" rx="200" ry="122" fill="url(#aurora)" opacity="{a0}">
     <animate attributeName="opacity" values="{a0};{a1};{a0}" dur="36s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
     <animateTransform attributeName="transform" type="translate" values="-18 0;18 0;-18 0" dur="36s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
   </ellipse>
@@ -182,42 +183,98 @@ def header(p):
 
 
 # ------------------------------------------------------------------ footer
+# A generation step: tokens are produced one by one along this chain,
+# ending in the <|eos|> node (last point).
+CHAIN = [(612, 112), (660, 78), (708, 104), (756, 66), (804, 96), (852, 62), (896, 88)]
+F_PERIOD = 8.0
+F_BEGIN = 1.2
+
+
 def footer(p):
-    W, H = 960, 110
-    x0, x1, y = 262, 640, 58
-    tokens = []
-    colors = [p["accent"], p["teal"], p["muted"], p["teal"], p["accent"]]
-    for k, col in enumerate(colors):
-        anim = f'dur="14s" begin="-{k * 14 / len(colors):.1f}s" repeatCount="indefinite"'
-        tokens.append(
-            f'  <rect y="{y - 4}" width="18" height="8" rx="4" fill="{col}" opacity="0">'
-            f'<animate attributeName="x" values="{x0};{x1 - 18}" {anim}/>'
-            f'<animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.12;0.85;1" {anim}/></rect>')
+    W, H = 960, 160
+    rng = random.Random(3)
+
+    # idle constellation around the chain, same style as the header
+    pts = []
+    while len(pts) < 22:
+        x, y = rng.uniform(596, 916), rng.uniform(24, 146)
+        if any(math.dist((x, y), q) < 16 for q in pts) or any(math.dist((x, y), c) < 14 for c in CHAIN):
+            continue
+        pts.append((x, y))
+    edges = "\n".join(
+        f'    <line x1="{f(pts[i][0])}" y1="{f(pts[i][1])}" x2="{f(pts[j][0])}" y2="{f(pts[j][1])}"/>'
+        for i, j in idle_edges(pts))
+    points = "\n".join(f'    <circle cx="{f(x)}" cy="{f(y)}" r="2.6"/>' for x, y in pts + CHAIN[:-1])
+    chain_d = "M" + " L".join(f"{x},{y}" for x, y in CHAIN)
+
+    kt8 = lambda *ts: ";".join(f"{t / F_PERIOD:.4f}".rstrip("0").rstrip(".") or "0" for t in ts)
+    begin = f'begin="{F_BEGIN}s" dur="{F_PERIOD:.0f}s" repeatCount="indefinite"'
+    fade = f'keyTimes="{kt8(0, 5.6, 6.6, F_PERIOD)}" {begin}'
+
+    anim = []
+    # the hairline draws token to token (accent), like the header's retrieval lines
+    for i, ((x1, y1), (x2, y2)) in enumerate(zip(CHAIN, CHAIN[1:])):
+        s, e = 0.2 + 0.3 * i, 0.5 + 0.3 * i
+        anim.append(
+            f'  <line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{p["accent"]}" stroke-width="1.3" stroke-linecap="round" '
+            f'pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" opacity="0.9">'
+            f'<animate attributeName="stroke-dashoffset" values="1;1;0;0" keyTimes="{kt8(0, s, e, F_PERIOD)}" '
+            f'calcMode="spline" keySplines="0 0 1 1;{EASE_OUT};0 0 1 1" {begin}/>'
+            f'<animate attributeName="opacity" values="0.9;0.9;0;0" {fade}/></line>')
+    # each generated token tints teal as the line reaches it
+    for i, (x, y) in enumerate(CHAIN[:-1]):
+        t = 0.2 + 0.3 * i
+        tint = f'keyTimes="{kt8(0, t, t + 0.3, 5.6, 6.6, F_PERIOD)}" {begin}'
+        anim.append(
+            f'  <circle cx="{x}" cy="{y}" r="8" fill="{p["teal"]}" opacity="0"><animate attributeName="opacity" values="0;0;0.22;0.22;0;0" {tint}/></circle>'
+            f'<circle cx="{x}" cy="{y}" r="3.4" fill="{p["teal"]}" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" {tint}/></circle>')
+    # <|eos|>: always visible (finished first frame), pulses when generation reaches it
+    ex, ey = CHAIN[-1]
+    t_eos = 0.2 + 0.3 * (len(CHAIN) - 1)
+    anim.append(
+        f'  <circle cx="{ex}" cy="{ey}" r="5" fill="none" stroke="{p["highlight"]}" stroke-width="1.4" opacity="0">'
+        f'<animate attributeName="r" values="5;5;11;11" keyTimes="{kt8(0, t_eos, t_eos + 0.6, F_PERIOD)}" {begin}/>'
+        f'<animate attributeName="opacity" values="0;0.6;0;0" keyTimes="{kt8(0, t_eos, t_eos + 0.6, F_PERIOD)}" {begin}/></circle>')
+    anim.append(f'  <circle cx="{ex}" cy="{ey}" r="5" fill="{p["accent"]}"/>'
+                f'<circle cx="{ex}" cy="{ey}" r="2" fill="{p["highlight"]}"/>')
+
+    a0, a1 = p["aurora_op"]
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">
-  <title id="t">Kishor Hange · Bengaluru, IN</title>
+  <title id="t">Thanks for visiting. Kishor Hange, Bengaluru, IN</title>
+  <style>
+    @media (max-width: 520px) {{ .sub {{ display: none; }} }}
+  </style>
   <defs>
-    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="{p["edge"]}" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="{p["edge"]}"/>
-      <stop offset="1" stop-color="{p["edge"]}" stop-opacity="0"/>
-    </linearGradient>
+    <radialGradient id="aurora">
+      <stop offset="0" stop-color="{p["aurora"][0]}" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="{p["aurora"][1]}" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="{p["aurora"][1]}" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect x="48" y="14" width="864" height="1" fill="url(#rule)"/>
 
-  <g font-family="{MONO}" font-size="16">
-    <text x="48" y="{y + 5}" fill="{p["muted"]}">thanks for visiting</text>
-    <text x="652" y="{y + 5}" fill="{p["accent"]}" font-weight="600">&lt;|eos|&gt;</text>
-    <text x="894" y="{y + 5}" text-anchor="end" fill="{p["muted"]}">Bengaluru, IN</text>
+  <!-- ambient: aurora wash behind the constellation, 36 s drift -->
+  <ellipse cx="756" cy="82" rx="180" ry="72" fill="url(#aurora)" opacity="{a0}">
+    <animate attributeName="opacity" values="{a0};{a1};{a0}" dur="36s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+    <animateTransform attributeName="transform" type="translate" values="-14 0;14 0;-14 0" dur="36s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+  </ellipse>
+
+  <!-- idle embedding space + the path the next generation will take -->
+  <g stroke="{p["edge"]}" stroke-width="1" opacity="{p["edge_op"]}">
+{edges}
   </g>
+  <path d="{chain_d}" fill="none" stroke="{p["edge"]}" stroke-width="1" opacity="{p["edge_op"]}"/>
+  <g fill="{p["point"]}" opacity="{p["point_op"]}">
+{points}
+  </g>
+  <text x="{ex}" y="{ey + 26}" text-anchor="middle" font-family="{MONO}" font-size="12" font-weight="600" fill="{p["accent"]}">&lt;|eos|&gt;</text>
 
-  <!-- token stream flowing into <|eos|> -->
-  <line x1="{x0}" y1="{y}" x2="{x1}" y2="{y}" stroke="{p["edge"]}" stroke-width="1"/>
-{chr(10).join(tokens)}
+  <!-- primary: generation, token by token until <|eos|> -->
+{chr(10).join(anim)}
 
-  <!-- caret -->
-  <rect x="900" y="{y - 11}" width="9" height="18" fill="{p["highlight"]}">
-    <animate attributeName="opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/>
-  </rect>
+  <!-- type -->
+  <text x="48" y="74" font-family="{SANS}" font-size="40" font-weight="600" letter-spacing="-0.8" fill="{p["name"]}">Thanks for visiting</text>
+  <text class="sub" x="48" y="106" font-family="{SANS}" font-size="18" fill="{p["muted"]}">Let's build something intelligent together.</text>
+  <text x="48" y="136" font-family="{MONO}" font-size="13" letter-spacing="1.2" fill="{p["muted"]}">BENGALURU, IN <tspan fill="{p["highlight"]}">▍<animate attributeName="fill-opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></tspan></text>
 </svg>
 """
 
