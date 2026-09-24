@@ -55,12 +55,15 @@ I care most about the engineering around the model: making it fast, measurable a
   <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kishorhange111&theme=tokyonight" alt="Contribution overview" />
 </p>
 <p align="center">
-  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=tokyonight" alt="GitHub stats" />
-  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=tokyonight" alt="Most used languages" />
-  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kishorhange111&theme=tokyonight&utcOffset=5.5" alt="Productive time (IST)" />
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=tokyonight" alt="GitHub stats" />
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=tokyonight" alt="Top languages by commit" />
 </p>
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=kishorhange111&theme=tokyonight&hide_border=true&background=1A1B27&ring=A78BFA&fire=6366F1&currStreakLabel=A78BFA" alt="Contribution streak" />
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kishorhange111&theme=tokyonight" alt="Repos per language" />
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kishorhange111&theme=tokyonight&utcOffset=5.5" alt="Commits by hour (IST)" />
+</p>
+<p align="center">
+  <img width="70%" src="https://streak-stats.demolab.com?user=kishorhange111&theme=tokyonight&hide_border=true&background=1A1B27&ring=A78BFA&fire=6366F1&currStreakLabel=A78BFA" alt="Contribution streak" />
 </p>
 <p align="center">
   <picture>
