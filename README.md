@@ -52,11 +52,22 @@ I care most about the engineering around the model: making it fast, measurable a
 
 ### 📊 GitHub activity
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=kishorhange111&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kishorhange111&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Top languages" />
+  <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kishorhange111&theme=tokyonight" alt="Contribution overview" />
 </p>
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=kishorhange111&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=tokyonight" alt="GitHub stats" />
+  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=tokyonight" alt="Most used languages" />
+  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kishorhange111&theme=tokyonight&utcOffset=5.5" alt="Productive time (IST)" />
+</p>
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=kishorhange111&theme=tokyonight&hide_border=true&background=1A1B27&ring=A78BFA&fire=6366F1&currStreakLabel=A78BFA" alt="Contribution streak" />
+</p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
+    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
+  </picture>
 </p>
 
 <p align="center"><sub>🎓 B.Tech in Computer Science and Engineering, DKTE Society's Textile and Engineering Institute, Ichalkaranji (2019–2023)</sub></p>
