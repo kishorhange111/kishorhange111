@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4f46e5,100:a78bfa&height=190&section=header&text=Kishor%20Hange&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=ML%20%7C%20Generative%20AI%20Engineer&descSize=18&descAlignY=58" alt="Kishor Hange - ML | Generative AI Engineer" width="100%" />
+  <img src="assets/header.svg" alt="Kishor Hange - ML | Generative AI Engineer" width="100%" />
 </p>
 
 <p align="center">
@@ -10,9 +10,7 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/kishorhange/"><img src="https://img.shields.io/badge/LinkedIn-kishorhange-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://websitekishor.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-websitekishor-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
-  <a href="mailto:kishorhange46@gmail.com"><img src="https://img.shields.io/badge/Email-Contact%20me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-</p>
+  <a href="https://websitekishor.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-websitekishor-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a></p>
 
 ### 👋 About me
 
@@ -76,5 +74,5 @@ I care most about the engineering around the model: making it fast, measurable a
 <p align="center"><sub>🎓 B.Tech in Computer Science and Engineering, DKTE Society's Textile and Engineering Institute, Ichalkaranji (2019–2023)</sub></p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A1B27,55:3B2A8C,100:4F46E5&height=130&section=footer&text=Thanks%20for%20visiting!&fontSize=22&fontColor=C4B5FD&fontAlignY=72&animation=fadeIn" alt="Thanks for visiting!" width="100%" />
+  <img src="assets/footer.svg" alt="Thanks for visiting!" width="100%" />
 </p>
