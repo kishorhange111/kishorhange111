@@ -5,12 +5,6 @@
 </picture>
 
 <p align="center">
-  <a href="https://github.com/kishorhange111">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=3000&pause=900&color=6366F1&center=true&vCenter=true&width=640&lines=Software+Engineer+%40+E2open+%C2%B7+Bengaluru;Building+LLM+apps%2C+RAG+pipelines+%26+AI+agents;Fine-tuning%3A+LoRA+%C2%B7+QLoRA+%C2%B7+DPO+%C2%B7+GRPO;Making+models+fast%2C+measurable+%26+reliable" alt="Typing animation" />
-  </a>
-</p>
-
-<p align="center">
   <a href="https://www.linkedin.com/in/kishorhange/"><img src="https://img.shields.io/badge/LinkedIn-kishorhange-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://websitekishor.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-websitekishor-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a></p>
 
