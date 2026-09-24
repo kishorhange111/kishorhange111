@@ -22,6 +22,7 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake-tokyo.gif?color_snake=#c4b5fd&color_dots=#24283b,#3b3170,#5b46b0,#7c5ce6,#a78bfa&color_background=#1a1b27
 
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v4

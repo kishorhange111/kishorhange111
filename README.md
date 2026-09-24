@@ -63,14 +63,10 @@ I care most about the engineering around the model: making it fast, measurable a
   <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kishorhange111&theme=tokyonight&utcOffset=5.5" alt="Commits by hour (IST)" />
 </p>
 <p align="center">
-  <img width="70%" src="https://streak-stats.demolab.com?user=kishorhange111&theme=tokyonight&hide_border=true&background=1A1B27&ring=A78BFA&fire=6366F1&currStreakLabel=A78BFA" alt="Contribution streak" />
+  <img width="99%" src="https://streak-stats.demolab.com?user=kishorhange111&theme=tokyonight&hide_border=true&background=1A1B27&ring=A78BFA&fire=6366F1&currStreakLabel=A78BFA" alt="Contribution streak" />
 </p>
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
-    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
-  </picture>
+  <img width="99%" src="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake-tokyo.gif" alt="Contribution snake animation" />
 </p>
 
 <p align="center"><sub>🎓 B.Tech in Computer Science and Engineering, DKTE Society's Textile and Engineering Institute, Ichalkaranji (2019–2023)</sub></p>
