@@ -1,6 +1,8 @@
-<p align="center">
-  <img src="assets/header.svg" alt="Kishor Hange - ML | Generative AI Engineer" width="100%" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=1">
+  <img alt="Kishor Hange, Software Engineer at E2open, Bengaluru. LLM apps, RAG, fine-tuning, AI agents." src="./assets/header-light.svg?v=1" width="100%">
+</picture>
 
 <p align="center">
   <a href="https://github.com/kishorhange111">
@@ -73,6 +75,8 @@ I care most about the engineering around the model: making it fast, measurable a
 
 <p align="center"><sub>🎓 B.Tech in Computer Science and Engineering, DKTE Society's Textile and Engineering Institute, Ichalkaranji (2019–2023)</sub></p>
 
-<p align="center">
-  <img src="assets/footer.svg" alt="Thanks for visiting!" width="100%" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg?v=1">
+  <img alt="Thanks for visiting. Kishor Hange, Bengaluru, IN" src="./assets/footer-light.svg?v=1" width="100%">
+</picture>
