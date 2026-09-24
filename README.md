@@ -63,7 +63,7 @@ I care most about the engineering around the model: making it fast, measurable a
   <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kishorhange111&theme=tokyonight&utcOffset=5.5" alt="Commits by hour (IST)" />
 </p>
 <p align="center">
-  <img width="99%" src="https://streak-stats.demolab.com?user=kishorhange111&theme=tokyonight&hide_border=true&background=1A1B27&ring=A78BFA&fire=6366F1&currStreakLabel=A78BFA" alt="Contribution streak" />
+  <img width="99%" src="https://streak-stats.demolab.com?user=kishorhange111&hide_border=true&border_radius=10&background=135,1A1B27,3B2A8C&ring=C4B5FD&fire=A78BFA&stroke=6D5BD0&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=C4B5FD&sideLabels=C4B5FD&dates=A9A6D8" alt="Contribution streak" />
 </p>
 <p align="center">
   <img width="99%" src="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake-tokyo.gif" alt="Contribution snake animation" />
