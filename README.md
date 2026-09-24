@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4f46e5,100:a78bfa&height=190&section=header&text=Kishor%20Hange&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=ML%20%26%20Generative%20AI%20Engineer&descSize=18&descAlignY=58" alt="Kishor Hange - ML & Generative AI Engineer" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4f46e5,100:a78bfa&height=190&section=header&text=Kishor%20Hange&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=ML%20%7C%20Generative%20AI%20Engineer&descSize=18&descAlignY=58" alt="Kishor Hange - ML | Generative AI Engineer" width="100%" />
 </p>
 
 <p align="center">
