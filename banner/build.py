@@ -171,12 +171,11 @@ def header(p):
   <text x="912" y="268" text-anchor="end" font-family="{MONO}" font-size="11" fill="{p["muted"]}" opacity="0.85">retrieve(q, k=5)</text>
 
   <!-- type -->
-  <text x="48" y="58" font-family="{MONO}" font-size="14" letter-spacing="2.5" fill="{p["accent"]}" font-weight="600">ML · GENERATIVE AI ENGINEER{intro(0.1, 0.9, 0)}</text>
-  <text x="48" y="132" font-family="{SANS}" font-size="72" font-weight="600" letter-spacing="-1.5" fill="{p["name"]}">Kishor Hange{intro(0.15, 0.9, 8)}</text>
-  <text x="48" y="172" font-family="{SANS}" font-size="24" fill="{p["muted"]}">Software Engineer · E2open · Bengaluru{intro(0.3, 0.9, 8)}</text>
+  <text x="48" y="118" font-family="{SANS}" font-size="72" font-weight="600" letter-spacing="-1.5" fill="{p["name"]}">Kishor Hange{intro(0.15, 0.9, 8)}</text>
+  <text x="48" y="158" font-family="{SANS}" font-size="24" fill="{p["muted"]}">Software Engineer · E2open · Bengaluru{intro(0.3, 0.9, 8)}</text>
   <g class="topics" font-family="{MONO}" font-size="14.5" letter-spacing="1.2" fill="{p["muted"]}">
-    <text x="48" y="214">LLM APPS · RAG · AI AGENTS{intro(0.65, 0.6, 0)}</text>
-    <text x="48" y="238">FINE-TUNING: LoRA · QLoRA · DPO · GRPO{intro(0.75, 0.6, 0)}</text>
+    <text x="48" y="202">LLM APPS · RAG · AI AGENTS{intro(0.65, 0.6, 0)}</text>
+    <text x="48" y="226">FINE-TUNING: LoRA · QLoRA · DPO · GRPO{intro(0.75, 0.6, 0)}</text>
   </g>
 </svg>
 """

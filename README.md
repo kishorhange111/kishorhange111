@@ -1,7 +1,7 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=1">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=1">
-  <img alt="Kishor Hange, Software Engineer at E2open, Bengaluru. LLM apps, RAG, fine-tuning, AI agents." src="./assets/header-light.svg?v=1" width="100%">
+﻿<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=2">
+  <img alt="Kishor Hange, Software Engineer at E2open, Bengaluru. LLM apps, RAG, fine-tuning, AI agents." src="./assets/header-light.svg?v=2" width="100%">
 </picture>
 
 <p align="center">
