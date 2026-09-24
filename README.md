@@ -66,11 +66,15 @@ I care most about the engineering around the model: making it fast, measurable a
   <img width="99%" src="https://streak-stats.demolab.com?user=kishorhange111&hide_border=true&border_radius=10&background=135,1A1B27,3B2A8C&ring=C4B5FD&fire=A78BFA&stroke=6D5BD0&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=C4B5FD&sideLabels=C4B5FD&dates=A9A6D8" alt="Contribution streak" />
 </p>
 <p align="center">
-  <img width="99%" src="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake-tokyo.gif" alt="Contribution snake animation" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
+    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
+  </picture>
 </p>
 
 <p align="center"><sub>🎓 B.Tech in Computer Science and Engineering, DKTE Society's Textile and Engineering Institute, Ichalkaranji (2019–2023)</sub></p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:a78bfa,100:4f46e5&height=110&section=footer" alt="" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A1B27,55:3B2A8C,100:4F46E5&height=130&section=footer&text=Thanks%20for%20visiting!&fontSize=22&fontColor=C4B5FD&fontAlignY=72&animation=fadeIn" alt="Thanks for visiting!" width="100%" />
 </p>
