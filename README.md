@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/kishorhange/"><img src="https://img.shields.io/badge/LinkedIn-kishorhange-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://websitekishor.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-websitekishor-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a></p>
+  <a href="https://kishorhange.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-kishorhange.vercel.app-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a></p>
 
 ### 👋 About me
 
