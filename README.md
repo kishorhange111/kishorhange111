@@ -27,11 +27,15 @@ I care most about the engineering around the model: making it fast, measurable a
 | Project | What it shows |
 |---|---|
 | [**mini-chatgpt**](https://github.com/kishorhange111/mini-chatgpt) | Built a chat assistant from a base LLM: SFT → DPO → benchmarks. Matches Qwen's official instruct model on instruction following (IFEval) and beats it on ARC with ~3 GPU-hours |
+| [**llm-inference-optimization**](https://github.com/kishorhange111/llm-inference-optimization) | Measured LLM serving speed-ups on one GPU: int8/NF4 quantisation with perplexity, SDPA attention, `torch.compile` + static KV cache, speculative decoding, KV-cache capacity planning, and a vLLM concurrency sweep with TTFT/TPOT percentiles |
+| [**production-rag-service**](https://github.com/kishorhange111/production-rag-service) | FastAPI RAG service: hybrid BM25 + dense retrieval with RRF, reranking, citations, prompt-injection screen, abstention, streaming, Prometheus metrics, Docker. Evaluated on SQuAD 2.0 with bootstrap CIs |
+| [**llm-evaluation-harness**](https://github.com/kishorhange111/llm-evaluation-harness) | LLM benchmark harness with confidence intervals and paired significance tests, sandboxed code execution and a position-bias-checked LLM judge. Matches EleutherAI's lm-evaluation-harness within 0.5 points on MMLU, ARC and HellaSwag |
+| [**distributed-llm-training**](https://github.com/kishorhange111/distributed-llm-training) | GPT-2 pre-training stack in plain PyTorch: single GPU, DDP and FSDP2, bf16, `torch.compile`, activation checkpointing, sharded checkpoints with exact resume. 52 % MFU on an A100 |
 | [**generative-ai-engineering**](https://github.com/kishorhange111/generative-ai-engineering) | QLoRA text-to-SQL (7B), 7B → 0.5B distillation, GRPO reinforcement learning, function-calling agent (16.7 % → 94.8 % exact tool calls), RAG evaluation, vision-language, Whisper for Marathi, prompt-injection guardrail |
 | [**deep-learning-portfolio**](https://github.com/kishorhange111/deep-learning-portfolio) | 14 projects across computer vision, NLP and generative models, e.g. BERT made 4.8× faster via distillation + ONNX + int8, Vision Transformers, U-Net, AdaIN, Music Transformer, molecule generation |
 | [cnn-edge-optimization-tflite-onnx-tvm](https://github.com/kishorhange111/cnn-edge-optimization-tflite-onnx-tvm) | Compressing a Keras CNN for edge devices with TFLite, ONNX and Apache TVM; models ~12x smaller. Final-year team project |
+| [surname-origin-classifier-rnn](https://github.com/kishorhange111/surname-origin-classifier-rnn) | Character-level RNN in PyTorch that predicts a surname's language of origin across 18 languages; found and fixed train/test leakage from duplicate names |
 | [llm-token-visualizer](https://github.com/kishorhange111/llm-token-visualizer) | Streamlit app comparing how LLM tokenizers (BERT, GPT-2, GPT-4, Phi-3, DeepSeek) split the same text |
-| [surname-origin-classifier-rnn](https://github.com/kishorhange111/surname-origin-classifier-rnn) | Character-level RNN in PyTorch that predicts a surname's language of origin across 18 languages, served with Streamlit |
 | [vm-energy-agent](https://github.com/kishorhange111/vm-energy-agent) | Monitoring agent that collects system metrics, estimates VM power usage and exposes them to observability systems |
 
 ### 🛠️ Tools I use
