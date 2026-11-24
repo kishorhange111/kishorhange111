@@ -7,6 +7,7 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/kishorhange/"><img src="https://img.shields.io/badge/LinkedIn-kishorhange-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://kishorhange.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-kishorhange.vercel.app-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+  <a href="./PORTFOLIO_MAP.md"><img src="https://img.shields.io/badge/Competency_Map-PORTFOLIO__MAP.md-2B7A87?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Portfolio Competency Map" /></a>
   <a href="mailto:kishorhange46@gmail.com"><img src="https://img.shields.io/badge/Email-kishorhange46%40gmail.com-D97757?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
@@ -41,6 +42,8 @@
 ---
 
 ## Flagship Portfolio
+
+> Hiring manager or recruiter? See the [**Portfolio Competency Map (`PORTFOLIO_MAP.md`)**](./PORTFOLIO_MAP.md) for a 60-second role-based guide mapping **FDE**, **AI Engineer**, **ML Systems**, and **MLOps** competencies directly to repos and verified results.
 
 ### 1. Enterprise FDE & Agentic Systems
 
