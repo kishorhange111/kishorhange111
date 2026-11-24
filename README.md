@@ -13,7 +13,7 @@
 
 ## About
 
-**Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru) with **~4 years of experience** taking machine learning and LLM systems from prototype to production. I specialize in the engineering around the model — secure MCP tool layers, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps — so AI systems stay fast, measurable, and reliable once real customers depend on them.
+**Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru) with **~4 years of experience** taking machine learning and LLM systems from prototype to production. I specialize in the engineering around the model — secure MCP tool layers, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps — so AI systems stay fast, measurable, and reliable once real customers depend on them. On the research side, I run controlled, multi-seed experiments from scratch — RL and RLVR (GRPO), mechanistic interpretability, grokking and scaling laws — and report null and negative results as carefully as wins.
 
 ---
 
@@ -21,10 +21,11 @@
 
 | Pillar | Focus Areas |
 |---|---|
-| **FDE & Agentic Systems** | Multi-tenant MCP servers, RBAC/ACL policy enforcement, stateful DAG/LangGraph runtimes, HITL approval workflows, PII & prompt-injection guardrails, immutable audit trails |
-| **Production RAG & Evals** | Hybrid BM25 + dense retrieval (RRF), cross-encoder reranking, citation grounding, abstention, Ragas/DeepEval CI regression gates, statistical eval harnesses with bootstrap CIs |
+| **FDE & Agentic Systems** | Multi-tenant MCP servers, RBAC/ACL policy enforcement, stateful DAG/LangGraph runtimes, TypeScript agent runtime (typed tools, loop guards, budgets, tracing), long-term agent memory, pass^k reliability evals, HITL approval workflows, PII & prompt-injection guardrails |
+| **Production RAG & Evals** | Hybrid BM25 + dense retrieval (RRF), knowledge graphs & entity linking for multi-hop QA, cross-encoder reranking, citation grounding, abstention, Ragas/DeepEval CI regression gates, statistical eval harnesses with bootstrap CIs |
 | **ML Systems & Inference** | Quantization (int8, NF4, AWQ), pruning, ONNX Runtime / Optimum, `torch.compile`, speculative decoding, KV-cache capacity planning, vLLM concurrency & TTFT/TPOT benchmarking |
 | **Distributed Training & MLOps** | PyTorch DDP & FSDP2, SFT / DPO / GRPO / QLoRA post-training, sharded checkpointing, gated MLflow registries, drift-triggered retraining, OpenTelemetry / Prometheus / Grafana |
+| **Research & Science of Deep Learning** | RL from scratch (DQN, PPO), RLVR (GRPO / Dr. GRPO / RLOO / DPO) with matched-compute controls and pass@k, mechanistic interpretability (probes, activation patching, sparse autoencoders), grokking progress measures, IsoFLOP scaling-law fits |
 
 ---
 
