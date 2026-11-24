@@ -11,9 +11,10 @@ This guide maps **Forward Deployed Engineer (FDE)**, **AI Engineer**, and **ML S
 
 | Target Role | Top 3 Repositories to Inspect First | What to Look For |
 |---|---|---|
-| **Forward Deployed Engineer (FDE)** | [`enterprise-mcp-agent-platform`](https://github.com/kishorhange111/enterprise-mcp-agent-platform), [`mcp-sql-agent`](https://github.com/kishorhange111/mcp-sql-agent), [`production-rag-service`](https://github.com/kishorhange111/production-rag-service) | Multi-tenant RBAC/ACL scoping, customer config-as-code, MCP connectors, HITL approvals, PII/SQLi red-team suites, Helm/K8s, ADRs |
+| **Forward Deployed Engineer (FDE)** | [`enterprise-mcp-agent-platform`](https://github.com/kishorhange111/enterprise-mcp-agent-platform), [`agent-reliability-bench`](https://github.com/kishorhange111/agent-reliability-bench), [`mcp-sql-agent`](https://github.com/kishorhange111/mcp-sql-agent) | Agent reliability (pass^k, fault injection, policy violations), multi-tenant RBAC/ACL scoping, customer config-as-code, MCP connectors, HITL approvals, PII/SQLi red-team suites, Helm/K8s, ADRs |
 | **AI / LLM Engineer** | [`production-rag-service`](https://github.com/kishorhange111/production-rag-service), [`llm-evaluation-harness`](https://github.com/kishorhange111/llm-evaluation-harness), [`embedding-finetuning-retrieval`](https://github.com/kishorhange111/embedding-finetuning-retrieval), [`llm-structured-extraction`](https://github.com/kishorhange111/llm-structured-extraction) | Hybrid BM25+dense retrieval, cross-encoder reranking, citation verification, statistical evals (bootstrap CIs, paired tests), Matryoshka embeddings, schema-constrained decoding |
 | **ML Systems / Inference / Training Engineer** | [`llm-inference-optimization`](https://github.com/kishorhange111/llm-inference-optimization), [`distributed-llm-training`](https://github.com/kishorhange111/distributed-llm-training), [`mini-chatgpt`](https://github.com/kishorhange111/mini-chatgpt) | int8/NF4/AWQ quantization, `torch.compile`, speculative decoding, vLLM TTFT/TPOT sweeps, DDP/FSDP2 (52% MFU on A100), SFT + from-scratch DPO |
+| **Research Engineer / RL & Post-Training** | [`rlvr-grpo-from-scratch`](https://github.com/kishorhange111/rlvr-grpo-from-scratch), [`arithmetic-transformer-interp`](https://github.com/kishorhange111/arithmetic-transformer-interp), [`rl-from-scratch`](https://github.com/kishorhange111/rl-from-scratch) | Controlled multi-seed experiments with matched compute, GRPO/Dr. GRPO/RLOO/DPO from scratch, probes + activation patching + sparse autoencoders, honest reporting of null and negative results |
 | **Applied ML / MLOps Engineer** | [`demand-forecasting-mlops`](https://github.com/kishorhange111/demand-forecasting-mlops), [`two-tower-recommender`](https://github.com/kishorhange111/two-tower-recommender), [`uplift-targeting`](https://github.com/kishorhange111/uplift-targeting) | Rolling-origin backtests, conformal intervals, gated MLflow registry, drift retraining, two-stage FAISS + LightGBM ranking, causal uplift (S/T/X/DR learners) |
 
 ---
@@ -46,7 +47,16 @@ This guide maps **Forward Deployed Engineer (FDE)**, **AI Engineer**, and **ML S
 | **Distributed Pre-Training** | [`distributed-llm-training`](https://github.com/kishorhange111/distributed-llm-training) | Plain-PyTorch GPT-2 stack across single GPU, DDP, and FSDP2 with bf16, activation checkpointing, and exact-resume sharded checkpoints (**52% MFU** on A100) |
 | **Post-Training (SFT, DPO, GRPO, QLoRA)** | [`mini-chatgpt`](https://github.com/kishorhange111/mini-chatgpt), [`generative-ai-engineering`](https://github.com/kishorhange111/generative-ai-engineering) | Qwen2.5-0.5B SFT (127M tokens) + from-scratch DPO (IFEval **36.7 vs 36.3**, ARC-Easy **+5 pts**); QLoRA text-to-SQL (**60.0% → 66.2%**); 7B→0.5B distillation; GRPO on GSM8K |
 
-### 4. Applied ML, Causal Modeling & MLOps
+### 4. Reinforcement Learning, Research & Agent Reliability
+
+| Competency | Public Proof (Repo) | Concrete Artifacts & Signals |
+|---|---|---|
+| **Deep RL Algorithms** | [`rl-from-scratch`](https://github.com/kishorhange111/rl-from-scratch) | DQN (Double/Dueling/Polyak), PPO (GAE, clipping, truncation bootstrap), REINFORCE; 5-seed IQM + steps-to-solve (PPO **5/5** CartPole, Double DQN **5/5** Acrobot in 20.8k steps) |
+| **RL for LLMs (RLVR)** | [`rlvr-grpo-from-scratch`](https://github.com/kishorhange111/rlvr-grpo-from-scratch) | GRPO / Dr. GRPO / RLOO advantage and loss-aggregation variants, k3-KL, online DPO with verifier-built pairs, unbiased pass@k, continued-SFT control at matched optimizer steps |
+| **Mechanistic Interpretability** | [`arithmetic-transformer-interp`](https://github.com/kishorhange111/arithmetic-transformer-interp) | Per-layer/position linear probes, causal activation patching on carry-flip pairs, TopK SAEs with FVU, dead-latent and spliced-CE evaluation |
+| **Agent Evaluation & Reliability** | [`agent-reliability-bench`](https://github.com/kishorhange111/agent-reliability-bench) | Final-state grading, policy monitor, pass^k (pass^1 0.77 → pass^8 0.32 at 10% faults), fault-to-violation cascades, Claude tool-use adapter |
+
+### 5. Applied ML, Causal Modeling & MLOps
 
 | Competency | Public Proof (Repo) | Concrete Artifacts & Signals |
 |---|---|---|

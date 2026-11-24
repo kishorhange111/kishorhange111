@@ -70,7 +70,16 @@
 | [**mini-chatgpt**](https://github.com/kishorhange111/mini-chatgpt) | End-to-end post-training from a base LLM (`Qwen2.5-0.5B`): 160k-conversation SFT (127M tokens) + DPO written from scratch (12k pairs) — matches Qwen Instruct on IFEval (**36.7 vs 36.3**) and beats it on ARC-Easy (**+5 pts**) in ~3 GPU-hours |
 | [**generative-ai-engineering**](https://github.com/kishorhange111/generative-ai-engineering) | 8 benchmarked LLM systems: QLoRA text-to-SQL (**60.0% → 66.2%**), 7B→0.5B distillation, function-calling agent (**16.7% → 94.8%** exact calls), GRPO on GSM8K, RAG eval, Qwen2-VL, Whisper Marathi (CER **53.6% → 14.7%**), and prompt-injection guardrails |
 
-### 4. Applied ML, Causal Inference & MLOps
+### 4. Reinforcement Learning, Research & Agent Reliability
+
+| Repository | Architecture & Measured Highlights |
+|---|---|
+| [**rl-from-scratch**](https://github.com/kishorhange111/rl-from-scratch) | DQN (Double/Dueling/Polyak), PPO (GAE, clipping, vectorized envs, truncation bootstrap) and REINFORCE in PyTorch with math-level unit tests; 45-run, 5-seed benchmark reporting IQM and sample efficiency — PPO **5/5 seeds solve CartPole** (median 51.6k steps), Double DQN **5/5 on Acrobot** (20.8k steps) |
+| [**agent-reliability-bench**](https://github.com/kishorhange111/agent-reliability-bench) | τ-bench-style stateful tool-use benchmark: policy monitor (auth, cross-customer access, unconfirmed writes), final-state grading, **pass^k** reliability and fault injection, Claude adapter — shows pass^1 0.77 collapsing to **pass^8 0.32** at 10% tool faults |
+| [**rlvr-grpo-from-scratch**](https://github.com/kishorhange111/rlvr-grpo-from-scratch) | RL from verifiable rewards from scratch: SFT → GRPO / Dr. GRPO / RLOO / online DPO on a tiny GPT with matched-compute, multi-seed controls and pass@k analysis |
+| [**arithmetic-transformer-interp**](https://github.com/kishorhange111/arithmetic-transformer-interp) | Mechanistic interpretability of a transformer that learned addition: linear probes, causal activation patching, and TopK sparse autoencoders with spliced-CE evaluation |
+
+### 5. Applied ML, Causal Inference & MLOps
 
 | Repository | Architecture & Measured Highlights |
 |---|---|
