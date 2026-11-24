@@ -51,6 +51,7 @@
 |---|---|
 | [**enterprise-mcp-agent-platform**](https://github.com/kishorhange111/enterprise-mcp-agent-platform) | Multi-tenant enterprise FDE platform: MCP server with read-only SQL/REST/doc connectors, RBAC & row-level policies, PII/prompt-injection guardrails, stateful checkpointed DAG runtime, HITL approval queue, immutable audit logs, OTel/Prometheus/Grafana, Helm/K8s & red-team security suite |
 | [**mcp-sql-agent**](https://github.com/kishorhange111/mcp-sql-agent) | LangGraph text-to-SQL agent behind an MCP server with layered AST (`sqlglot`) + SQLite authorizer guardrails — **89/89 attack queries blocked**, 0 protected values leaked, 39/60 (65%) execution accuracy with a local 1.5B model |
+| [**llm-reliability-gateway**](https://github.com/kishorhange111/llm-reliability-gateway) | Production LLM gateway: multi-provider fallback, failure-*rate* circuit breakers, full-jitter retries, per-tenant token buckets & budgets, exact/semantic cache, Prometheus — open-loop failure-injection sim shows fallback+breaker holds **100% availability** through a hanging outage with **64% fewer** wasted primary calls and **half the p95**; caught and fixed a breaker cascade (60% → 100%) |
 
 ### 2. Production RAG, Retrieval & Evaluation
 
@@ -77,7 +78,8 @@
 | [**rl-from-scratch**](https://github.com/kishorhange111/rl-from-scratch) | DQN (Double/Dueling/Polyak), PPO (GAE, clipping, vectorized envs, truncation bootstrap) and REINFORCE in PyTorch with math-level unit tests; 45-run, 5-seed benchmark reporting IQM and sample efficiency — PPO **5/5 seeds solve CartPole** (median 51.6k steps), Double DQN **5/5 on Acrobot** (20.8k steps) |
 | [**agent-reliability-bench**](https://github.com/kishorhange111/agent-reliability-bench) | τ-bench-style stateful tool-use benchmark: policy monitor (auth, cross-customer access, unconfirmed writes), final-state grading, **pass^k** reliability and fault injection, Claude adapter — shows pass^1 0.77 collapsing to **pass^8 0.32** at 10% tool faults |
 | [**rlvr-grpo-from-scratch**](https://github.com/kishorhange111/rlvr-grpo-from-scratch) | RL from verifiable rewards from scratch: SFT → GRPO / Dr. GRPO / RLOO / online DPO on a tiny GPT with matched-compute, multi-seed controls and pass@k analysis |
-| [**arithmetic-transformer-interp**](https://github.com/kishorhange111/arithmetic-transformer-interp) | Mechanistic interpretability of a transformer that learned addition: linear probes, causal activation patching, and TopK sparse autoencoders with spliced-CE evaluation |
+| [**arithmetic-transformer-interp**](https://github.com/kishorhange111/arithmetic-transformer-interp) | Mechanistic interpretability of a transformer that learned addition: activation patching localises the carry to the `b0` position in block 1, moved to `=` in block 2; shows **probe-decodable ≠ causally used** (88.5% probe acc, 2% patching effect); TopK SAEs (99.97% CE recovered) find near-monosemantic carry features |
+| [**grokking-progress-measures**](https://github.com/kishorhange111/grokking-progress-measures) | Grokking on modular addition (Nanda et al. setup): Fourier-sparsity and weight-norm progress measures, parallel weight-decay × data-fraction phase sweeps |
 
 ### 5. Applied ML, Causal Inference & MLOps
 
