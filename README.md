@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=3">
-  <img alt="Kishor Hange, Software Engineer at E2open, Bengaluru. LLM apps, RAG, fine-tuning, AI agents." src="./assets/header-light.svg?v=3" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=4">
+  <img alt="Kishor Hange — AI / ML & Forward Deployed Engineer at E2open, Bengaluru. Enterprise MCP agents, production RAG, LLM evals, inference optimization, and distributed training." src="./assets/header-light.svg?v=4" width="100%">
 </picture>
 
 <p align="center">
@@ -70,7 +70,7 @@ I care most about the engineering around the model: making it fast, measurable a
 <p align="center"><sub>🎓 B.Tech in Computer Science and Engineering, DKTE Society's Textile and Engineering Institute, Ichalkaranji (2019–2023)</sub></p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg?v=2">
-  <img alt="Thanks for visiting. Kishor Hange, Bengaluru, IN" src="./assets/footer-light.svg?v=2" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg?v=3">
+  <img alt="Thanks for visiting. Kishor Hange, Bengaluru, IN — FDE, ML & AI Systems" src="./assets/footer-light.svg?v=3" width="100%">
 </picture>

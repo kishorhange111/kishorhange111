@@ -41,7 +41,7 @@ def f(v):
 def make_points(seed=7):
     """Three loose clusters inside the constellation box (x 560-912, y 36-244)."""
     rng = random.Random(seed)
-    clusters = [((650, 92), "agents"), ((832, 104), "retrieval"), ((742, 196), "fine-tuning")]
+    clusters = [((650, 92), "mcp / agents"), ((832, 104), "hybrid rag"), ((742, 196), "ml systems")]
     pts = []
     for (cx, cy), _ in clusters:
         placed = 0
@@ -90,7 +90,7 @@ def header(p):
         for i, j in idle_edges(pts))
     points = [f'    <circle cx="{f(x)}" cy="{f(y)}" r="2.8"/>' for x, y in pts]
     labels = "\n".join(
-        f'    <text x="{cx}" y="{cy - 44 if name != "fine-tuning" else cy + 52}" text-anchor="middle">{name}</text>'
+        f'    <text x="{cx}" y="{cy - 44 if name != "ml systems" else cy + 52}" text-anchor="middle">{name}</text>'
         for (cx, cy), name in clusters)
 
     # retrieval loop: each query gets one 8 s slot inside the 24 s period
@@ -136,9 +136,10 @@ def header(p):
            f'dur="{delay + dur:.2f}s" fill="freeze"/>' if dy else ""))
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">
-  <title id="t">Kishor Hange: Software Engineer at E2open, Bengaluru. LLM apps, RAG, fine-tuning, AI agents.</title>
+  <title id="t">Kishor Hange: Forward Deployed, ML and AI Engineer at E2open, Bengaluru. Enterprise MCP agents, production RAG, LLM evals, inference optimization, and distributed training.</title>
   <style>
     @media (max-width: 520px) {{ .topics {{ display: none; }} .idle {{ opacity: 0.5; }} }}
+    @media (prefers-reduced-motion: reduce) {{ * {{ animation: none !important; }} }}
   </style>
   <defs>
     <radialGradient id="aurora">
@@ -172,11 +173,12 @@ def header(p):
   <text x="912" y="268" text-anchor="end" font-family="{MONO}" font-size="11" fill="{p["muted"]}" opacity="0.85">retrieve(q, k=5)</text>
 
   <!-- type -->
-  <text x="48" y="118" font-family="{SANS}" font-size="72" font-weight="600" letter-spacing="-1.5" fill="{p["name"]}">Kishor Hange{intro(0.15, 0.9, 8)}</text>
-  <text x="48" y="158" font-family="{SANS}" font-size="24" fill="{p["muted"]}">Software Engineer · E2open · Bengaluru{intro(0.3, 0.9, 8)}</text>
-  <g class="topics" font-family="{MONO}" font-size="14.5" letter-spacing="1.2" fill="{p["muted"]}">
-    <text x="48" y="202">LLM APPS · RAG · AI AGENTS{intro(0.65, 0.6, 0)}</text>
-    <text x="48" y="226">FINE-TUNING: LoRA · QLoRA · DPO · GRPO{intro(0.75, 0.6, 0)}</text>
+  <text x="48" y="112" font-family="{SANS}" font-size="70" font-weight="600" letter-spacing="-1.5" fill="{p["name"]}">Kishor Hange{intro(0.15, 0.9, 8)}</text>
+  <text x="48" y="150" font-family="{SANS}" font-size="22" fill="{p["muted"]}">AI / ML &amp; Forward Deployed Engineer · E2open · Bengaluru{intro(0.3, 0.9, 8)}</text>
+  <rect x="48" y="170" width="40" height="2.5" rx="1.25" fill="{p["accent"]}" opacity="0.9">{intro(0.45, 0.6, 0)}</rect>
+  <g class="topics" font-family="{MONO}" font-size="13.5" letter-spacing="1.0" fill="{p["muted"]}">
+    <text x="48" y="204">MCP AGENTS · PRODUCTION RAG · LLM EVALS{intro(0.65, 0.6, 0)}</text>
+    <text x="48" y="228">INFERENCE OPT · DISTRIBUTED TRAINING · MLOPS{intro(0.75, 0.6, 0)}</text>
   </g>
 </svg>
 """
@@ -243,6 +245,7 @@ def footer(p):
   <title id="t">Thanks for visiting. Kishor Hange, Bengaluru, IN</title>
   <style>
     @media (max-width: 520px) {{ .sub {{ display: none; }} }}
+    @media (prefers-reduced-motion: reduce) {{ * {{ animation: none !important; }} }}
   </style>
   <defs>
     <radialGradient id="aurora">
@@ -272,9 +275,9 @@ def footer(p):
 {chr(10).join(anim)}
 
   <!-- type -->
-  <text x="48" y="74" font-family="{SANS}" font-size="40" font-weight="600" letter-spacing="-0.8" fill="{p["name"]}">Thanks for visiting</text>
-  <text class="sub" x="48" y="106" font-family="{SANS}" font-size="18" fill="{p["muted"]}">Let's build something intelligent together.</text>
-  <text x="48" y="136" font-family="{MONO}" font-size="13" letter-spacing="1.2" fill="{p["muted"]}">BENGALURU, IN <tspan fill="{p["highlight"]}">▍<animate attributeName="fill-opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></tspan></text>
+  <text x="48" y="72" font-family="{SANS}" font-size="38" font-weight="600" letter-spacing="-0.8" fill="{p["name"]}">Thanks for visiting</text>
+  <text class="sub" x="48" y="104" font-family="{SANS}" font-size="17.5" fill="{p["muted"]}">Building fast, measurable, and reliable AI systems.</text>
+  <text x="48" y="136" font-family="{MONO}" font-size="12.5" letter-spacing="1.2" fill="{p["muted"]}">BENGALURU, IN · FDE · ML · AI SYSTEMS <tspan fill="{p["highlight"]}">▍<animate attributeName="fill-opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></tspan></text>
 </svg>
 """
 

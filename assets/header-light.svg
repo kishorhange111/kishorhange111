@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" role="img" aria-labelledby="t">
-  <title id="t">Kishor Hange: Software Engineer at E2open, Bengaluru. LLM apps, RAG, fine-tuning, AI agents.</title>
+  <title id="t">Kishor Hange: Forward Deployed, ML and AI Engineer at E2open, Bengaluru. Enterprise MCP agents, production RAG, LLM evals, inference optimization, and distributed training.</title>
   <style>
     @media (max-width: 520px) { .topics { display: none; } .idle { opacity: 0.5; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <defs>
     <radialGradient id="aurora">
@@ -115,9 +116,9 @@
     <circle cx="736" cy="187.1" r="2.8"/>
   </g>
   <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" letter-spacing="1" fill="#59636E" opacity="0.85">
-    <text x="650" y="48" text-anchor="middle">agents</text>
-    <text x="832" y="60" text-anchor="middle">retrieval</text>
-    <text x="742" y="248" text-anchor="middle">fine-tuning</text>
+    <text x="650" y="48" text-anchor="middle">mcp / agents</text>
+    <text x="832" y="60" text-anchor="middle">hybrid rag</text>
+    <text x="742" y="248" text-anchor="middle">ml systems</text>
   </g>
   </g>
 
@@ -170,10 +171,11 @@
   <text x="912" y="268" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#59636E" opacity="0.85">retrieve(q, k=5)</text>
 
   <!-- type -->
-  <text x="48" y="118" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="600" letter-spacing="-1.5" fill="#1F2328">Kishor Hange<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.143;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.05s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" keyTimes="0;0.143;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.05s" fill="freeze"/></text>
-  <text x="48" y="158" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#59636E">Software Engineer · E2open · Bengaluru<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.250;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.20s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" keyTimes="0;0.250;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.20s" fill="freeze"/></text>
-  <g class="topics" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14.5" letter-spacing="1.2" fill="#59636E">
-    <text x="48" y="202">LLM APPS · RAG · AI AGENTS<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.520;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.25s" fill="freeze"/></text>
-    <text x="48" y="226">FINE-TUNING: LoRA · QLoRA · DPO · GRPO<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.556;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.35s" fill="freeze"/></text>
+  <text x="48" y="112" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="70" font-weight="600" letter-spacing="-1.5" fill="#1F2328">Kishor Hange<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.143;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.05s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" keyTimes="0;0.143;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.05s" fill="freeze"/></text>
+  <text x="48" y="150" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="22" fill="#59636E">AI / ML &amp; Forward Deployed Engineer · E2open · Bengaluru<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.250;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.20s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" keyTimes="0;0.250;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.20s" fill="freeze"/></text>
+  <rect x="48" y="170" width="40" height="2.5" rx="1.25" fill="#B4532F" opacity="0.9"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.429;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.05s" fill="freeze"/></rect>
+  <g class="topics" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13.5" letter-spacing="1.0" fill="#59636E">
+    <text x="48" y="204">MCP AGENTS · PRODUCTION RAG · LLM EVALS<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.520;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.25s" fill="freeze"/></text>
+    <text x="48" y="228">INFERENCE OPT · DISTRIBUTED TRAINING · MLOPS<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.556;1" calcMode="spline" keySplines="0 0 1 1;0.16 1 0.3 1" dur="1.35s" fill="freeze"/></text>
   </g>
 </svg>
