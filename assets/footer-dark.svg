@@ -2,6 +2,7 @@
   <title id="t">Thanks for visiting. Kishor Hange, Bengaluru, IN</title>
   <style>
     @media (max-width: 520px) { .sub { display: none; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <defs>
     <radialGradient id="aurora">
@@ -96,7 +97,7 @@
   <circle cx="896" cy="88" r="5" fill="#D97757"/><circle cx="896" cy="88" r="2" fill="#E8A15A"/>
 
   <!-- type -->
-  <text x="48" y="74" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="600" letter-spacing="-0.8" fill="#E6EDF3">Thanks for visiting</text>
-  <text class="sub" x="48" y="106" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#8B949E">Let's build something intelligent together.</text>
-  <text x="48" y="136" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" letter-spacing="1.2" fill="#8B949E">BENGALURU, IN <tspan fill="#E8A15A">▍<animate attributeName="fill-opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></tspan></text>
+  <text x="48" y="72" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="600" letter-spacing="-0.8" fill="#E6EDF3">Thanks for visiting</text>
+  <text class="sub" x="48" y="104" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="17.5" fill="#8B949E">Building fast, measurable, and reliable AI systems.</text>
+  <text x="48" y="136" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" letter-spacing="1.2" fill="#8B949E">BENGALURU, IN · FDE · ML · AI SYSTEMS <tspan fill="#E8A15A">▍<animate attributeName="fill-opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></tspan></text>
 </svg>
