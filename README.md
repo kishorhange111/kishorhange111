@@ -133,7 +133,7 @@
 </details>
 
 <details>
-<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (11 repos)</strong></summary>
+<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (14 repos)</strong></summary>
 
 | Repository | Highlights |
 |---|---|
@@ -148,6 +148,9 @@
 | [**mup-from-scratch**](https://github.com/kishorhange111/mup-from-scratch) | **μP** (Tensor Programs V) by hand — per-layer init/lr/readout rules for Adam, coordinate checks and a width × lr sweep testing hyperparameter transfer vs standard parametrization |
 | [**masked-diffusion-lm**](https://github.com/kishorhange111/masked-diffusion-lm) | Absorbing-state **discrete diffusion LM** (MDLM / LLaDA) vs an equal-size autoregressive model — 1/t-weighted NELBO, ancestral & confidence-ordered samplers, steps-vs-quality and infilling |
 | [**test-time-compute-scaling**](https://github.com/kishorhange111/test-time-compute-scaling) | Test-time compute on GSM8K with vLLM — unbiased pass@k oracle vs self-consistency, confidence-weighted voting and best-of-N, plus confidence calibration |
+| [**attention-variants-mla**](https://github.com/kishorhange111/attention-variants-mla) | MHA / GQA / MQA and DeepSeek-V2 **Multi-head Latent Attention** with decoupled RoPE — the **absorbed-matrix decode path** (no per-head K/V ever materialised) is verified equal to the naive forward to 1e-10; KV-cache bytes per token vs bits/byte at equal training budget |
+| [**speculative-decoding**](https://github.com/kishorhange111/speculative-decoding) | Speculative decoding on a hand-written GPT-2 with a roll-back KV cache — exact accept/reject rule (Monte Carlo test that output matches the target distribution, with a power control), prompt-lookup drafting, gpt2→gpt2-xl acceptance and wall-clock speed-up on a T4 |
+| [**grpo-from-scratch**](https://github.com/kishorhange111/grpo-from-scratch) | **GRPO vs Dr. GRPO** on Qwen2.5-0.5B-Instruct through hand-written LoRA (adapters-off = KL reference, no second model copy) — RL with verifiable arithmetic rewards, resumable across 40-minute GPU sessions; tests pin the REINFORCE limit, clipping, k3 unbiasedness and each aggregation's length bias |
 
 </details>
 
