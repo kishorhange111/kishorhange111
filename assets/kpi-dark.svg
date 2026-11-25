@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 112" role="img" aria-labelledby="t">
+  <title id="t">Key Impact Metrics: -38% Inference Latency at E2open, +9.5% Classifier Accuracy at E2open, 588+ Tests and 100+ PRs across 9 production repos plus a merged CPython PR.</title>
+  <g>
+    <rect x="2" y="2" width="308" height="108" rx="14" fill="#161B22" fill-opacity="0.62" stroke="#30363D" stroke-width="1"/>
+    <rect x="140" y="14" width="32" height="2.5" rx="1.25" fill="#D97757" opacity="0.9"/>
+    <text x="156" y="52" text-anchor="middle" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="600" letter-spacing="-0.6" fill="#D97757">−38%</text>
+    <text x="156" y="76" text-anchor="middle" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#F0F6FC">Inference Latency</text>
+    <text x="156" y="95" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E">ONNX Runtime &amp; Optimum · E2open</text>
+  </g>
+  <g>
+    <rect x="326" y="2" width="308" height="108" rx="14" fill="#161B22" fill-opacity="0.62" stroke="#30363D" stroke-width="1"/>
+    <rect x="464" y="14" width="32" height="2.5" rx="1.25" fill="#5EB1BF" opacity="0.9"/>
+    <text x="480" y="52" text-anchor="middle" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="600" letter-spacing="-0.6" fill="#5EB1BF">+9.5%</text>
+    <text x="480" y="76" text-anchor="middle" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#F0F6FC">Classifier Accuracy</text>
+    <text x="480" y="95" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E">Custom Word2Vec + RF &amp; BERT · E2open</text>
+  </g>
+  <g>
+    <rect x="650" y="2" width="308" height="108" rx="14" fill="#161B22" fill-opacity="0.62" stroke="#30363D" stroke-width="1"/>
+    <rect x="788" y="14" width="32" height="2.5" rx="1.25" fill="#D97757" opacity="0.9"/>
+    <text x="804" y="52" text-anchor="middle" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="-0.6" fill="#D97757">588+ Tests · 100+ PRs</text>
+    <text x="804" y="76" text-anchor="middle" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#F0F6FC">Verified Engineering</text>
+    <text x="804" y="95" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E">9 Production Repos + CPython PR</text>
+  </g>
+</svg>

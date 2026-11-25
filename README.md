@@ -5,85 +5,74 @@
 </picture>
 
 <p align="center">
-  <a href="https://kishorhange.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-kishorhange.vercel.app-1F2328?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/kishorhange/"><img src="https://img.shields.io/badge/LinkedIn-kishorhange-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="./PORTFOLIO_MAP.md"><img src="https://img.shields.io/badge/Portfolio_Map-Role_Guide-2B7A87?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Portfolio Map" /></a>
-  <a href="https://github.com/python/cpython/pull/148978"><img src="https://img.shields.io/badge/Open_Source-CPython_PR-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Merged CPython PR" /></a>
-  <a href="mailto:kishorhange46@gmail.com"><img src="https://img.shields.io/badge/Email-kishorhange46%40gmail.com-D97757?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://kishorhange.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-1F2328?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/kishorhange/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="./PORTFOLIO_MAP.md"><img src="https://img.shields.io/badge/Portfolio_Map-2B7A87?style=flat-square&logo=readthedocs&logoColor=white" alt="Portfolio Map" /></a>
+  <a href="https://github.com/python/cpython/pull/148978"><img src="https://img.shields.io/badge/CPython_PR-3776AB?style=flat-square&logo=python&logoColor=white" alt="CPython PR" /></a>
+  <a href="mailto:kishorhange46@gmail.com"><img src="https://img.shields.io/badge/Email-D97757?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 **Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru, **~4 YOE**) taking LLM and ML systems from prototype to production — specializing in secure MCP agent platforms, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps. Outside production systems, I run controlled multi-seed deep learning experiments (RLVR/GRPO, mechanistic interpretability, grokking, scaling laws) and report null results as carefully as wins.
 
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <h3><code>−38%</code> Inference Latency</h3>
-      <sub>ONNX Runtime &amp; HF Optimum quantization/pruning @ <strong>E2open</strong></sub>
-    </td>
-    <td align="center" width="33%">
-      <h3><code>+9.5%</code> Classifier Accuracy</h3>
-      <sub>Custom Word2Vec + RF &amp; fine-tuned BERT @ <strong>E2open</strong></sub>
-    </td>
-    <td align="center" width="33%">
-      <h3><code>588+</code> Tests · <code>100+</code> PRs</h3>
-      <sub>9 production codebases + merged <strong>CPython</strong> PR</sub>
-    </td>
-  </tr>
-</table>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/kpi-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/kpi-light.svg?v=1">
+  <img alt="Impact Highlights: -38% Inference Latency at E2open, +9.5% Classifier Accuracy at E2open, 588+ Tests and 100+ PRs across 9 production repos plus a merged CPython PR." src="./assets/kpi-light.svg?v=1" width="100%">
+</picture>
 
 ---
 
 ## Flagship Systems
 
-> Hiring manager or recruiter? Open the [**Portfolio Competency Map (`PORTFOLIO_MAP.md`)**](./PORTFOLIO_MAP.md) for a 60-second role-based guide across **FDE**, **AI Engineer**, **ML Systems**, **Research**, and **MLOps**.
+> Hiring manager or recruiter? Open the [**Portfolio Competency Map**](./PORTFOLIO_MAP.md) for a 60-second role-based guide across **FDE**, **AI Engineer**, **ML Systems**, **Research**, and **MLOps**.
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <img src="https://img.shields.io/badge/FDE_%C2%B7_MCP_PLATFORM-D97757?style=flat-square" alt="FDE MCP Platform" /><br/>
       <a href="https://github.com/kishorhange111/enterprise-mcp-agent-platform"><strong>enterprise-mcp-agent-platform</strong></a><br/>
-      <sub>Multi-tenant FDE &amp; MCP platform: RBAC/row-level policies, PII &amp; injection guardrails, SQL/REST/doc connectors, checkpointed DAG runtime, HITL approvals, OTel/Prometheus, Helm/K8s.</sub><br/><br/>
-      <code>MCP</code> <code>FastAPI</code> <code>OTel</code> <code>Helm/K8s</code><br/>
-      <strong>113 tests passing</strong> · 20 PRs · Red-team security suite + ADRs
+      <sub>Multi-tenant MCP platform with RBAC, PII/injection guardrails, SQL/REST/doc connectors, HITL approvals &amp; Helm/K8s.</sub><br/><br/>
+      <code>MCP</code> <code>FastAPI</code> <code>OTel</code> <code>Helm</code><br/>
+      <strong>113 tests · 20 PRs · Red-team suite</strong>
     </td>
     <td width="50%" valign="top">
       <img src="https://img.shields.io/badge/PRODUCTION_HYBRID_RAG-2B7A87?style=flat-square" alt="Production Hybrid RAG" /><br/>
       <a href="https://github.com/kishorhange111/production-rag-service"><strong>production-rag-service</strong></a><br/>
-      <sub>Enterprise FastAPI RAG: multi-format ingestion, CDC queue, BM25 + dense RRF, calibrated reranking, fail-closed ACLs, citation verifier, SSE streaming, CI eval gate, Helm/K8s.</sub><br/><br/>
-      <code>FastAPI</code> <code>BM25+FAISS</code> <code>Reranker</code> <code>Prometheus</code><br/>
-      <strong>80 tests passing</strong> · <strong>10/10</strong> golden eval gate (1.00 faithfulness)
+      <sub>FastAPI hybrid RAG with CDC ingestion, BM25 + dense RRF, calibrated reranking, fail-closed ACLs &amp; citation checks.</sub><br/><br/>
+      <code>FastAPI</code> <code>FAISS</code> <code>Reranker</code> <code>K8s</code><br/>
+      <strong>80 tests · 10/10 eval gate (1.00 faithful)</strong>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <img src="https://img.shields.io/badge/LLM_EVALUATION-57606A?style=flat-square" alt="LLM Evaluation" /><br/>
       <a href="https://github.com/kishorhange111/llm-evaluation-harness"><strong>llm-evaluation-harness</strong></a><br/>
-      <sub>Reproducible LLM benchmark harness (MMLU, ARC, HellaSwag, GSM8K, sandboxed HumanEval), position-bias-controlled LLM-as-judge, bootstrap CIs &amp; paired significance tests.</sub><br/><br/>
-      <code>PyTorch</code> <code>Statistics</code> <code>Sandboxed_Exec</code> <code>CI</code><br/>
-      <strong>93 tests passing</strong> · Matches EleutherAI <code>lm-eval</code> within <strong>0.5 pts</strong>
+      <sub>Reproducible eval suite (MMLU, ARC, HellaSwag, GSM8K, HumanEval) with bias-controlled LLM judge &amp; bootstrap CIs.</sub><br/><br/>
+      <code>PyTorch</code> <code>Stats</code> <code>Sandboxed Exec</code> <code>CI</code><br/>
+      <strong>93 tests · Within 0.5 pts of lm-eval</strong>
     </td>
     <td width="50%" valign="top">
       <img src="https://img.shields.io/badge/INFERENCE_OPTIMIZATION-B4532F?style=flat-square" alt="Inference Optimization" /><br/>
       <a href="https://github.com/kishorhange111/llm-inference-optimization"><strong>llm-inference-optimization</strong></a><br/>
-      <sub>Single-GPU &amp; serving stack: int8/NF4/AWQ quantization, KV-cache paging, continuous batching, radix prefix cache, speculative decoding, vLLM TTFT/TPOT sweeps &amp; OpenAI router.</sub><br/><br/>
+      <sub>Serving &amp; GPU optimization: int8/NF4/AWQ quantization, KV paging, continuous batching, speculative decoding &amp; vLLM.</sub><br/><br/>
       <code>vLLM</code> <code>PyTorch</code> <code>Quantization</code> <code>FastAPI</code><br/>
-      <strong>55 tests passing</strong> · Concurrency &amp; latency benchmark suite
+      <strong>55 tests · TTFT/TPOT latency sweeps</strong>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <img src="https://img.shields.io/badge/DISTRIBUTED_TRAINING-2B7A87?style=flat-square" alt="Distributed Training" /><br/>
       <a href="https://github.com/kishorhange111/distributed-llm-training"><strong>distributed-llm-training</strong></a><br/>
-      <sub>Plain-PyTorch GPT-2 pre-training &amp; alignment: DDP, FSDP2, DeepSpeed ZeRO-2/3 configs, bf16, <code>torch.compile</code>, LoRA/SFT/DPO/GRPO, atomic sharded checkpoints &amp; K8s PyTorchJob.</sub><br/><br/>
+      <sub>Plain-PyTorch GPT-2 training &amp; alignment: DDP, FSDP2, ZeRO-2/3 configs, bf16, LoRA/SFT/DPO/GRPO &amp; atomic checkpoints.</sub><br/><br/>
       <code>PyTorch</code> <code>DDP</code> <code>FSDP2</code> <code>MLflow</code><br/>
-      <strong>57 tests passing</strong> · <strong>52% MFU</strong> pre-training on A100
+      <strong>57 tests · 52% MFU on A100</strong>
     </td>
     <td width="50%" valign="top">
       <img src="https://img.shields.io/badge/MCP_%C2%B7_SQL_SECURITY-D97757?style=flat-square" alt="MCP SQL Security" /><br/>
       <a href="https://github.com/kishorhange111/mcp-sql-agent"><strong>mcp-sql-agent</strong></a><br/>
-      <sub>LangGraph text-to-SQL agent behind an MCP server with layered <code>sqlglot</code> AST validation, SQLite authorizer, multi-tenant RLS, column masking &amp; tamper-evident audit logs.</sub><br/><br/>
+      <sub>LangGraph text-to-SQL agent behind an MCP server with sqlglot AST guards, SQLite authorizer, RLS &amp; audit logs.</sub><br/><br/>
       <code>MCP</code> <code>LangGraph</code> <code>sqlglot</code> <code>RLS</code><br/>
-      <strong>89 tests passing</strong> · <strong>89/89</strong> attacks blocked, <strong>0</strong> leaks
+      <strong>89 tests · 89/89 attacks blocked</strong>
     </td>
   </tr>
 </table>
@@ -92,7 +81,7 @@
 
 ## Production Impact @ E2open
 
-> **Software Engineer** (Sep 2025 – Present) · **Associate Software Engineer** (Jul 2023 – Sep 2025)
+> **Software Engineer** (Sep 2025 – Present) · **Associate SE** (Jul 2023 – Sep 2025)
 
 - **38% lower inference latency** via quantization and pruning (ONNX Runtime, Hugging Face Optimum), saving a full delivery sprint.
 - **+9.5% classification accuracy** replacing a legacy business-document classifier with Random Forest on custom Word2Vec embeddings and fine-tuned BERT.
@@ -174,7 +163,7 @@
 
 | Layer | Technologies |
 |---|---|
-| **Agents, RAG & Evals** | MCP · LangGraph · LangChain · CrewAI · FAISS · Chroma · OpenSearch · Ragas · DeepEval · `sqlglot` · `xgrammar` |
+| **Agents, RAG & Evals** | MCP · LangGraph · LangChain · CrewAI · FAISS · Chroma · OpenSearch · Ragas · DeepEval · sqlglot · xgrammar |
 | **Models, Training & Inference** | PyTorch (DDP, FSDP2) · Hugging Face Transformers · PEFT (LoRA, QLoRA) · TRL (SFT, DPO, GRPO) · vLLM · ONNX Runtime · Optimum · TFLite · Apache TVM · LightGBM · scikit-learn |
 | **Serving, Infra & Observability** | FastAPI · Docker · Kubernetes · Helm · Terraform · GitHub Actions · MLflow · Airflow · OpenTelemetry · Prometheus · Grafana |
 | **Languages, Data & Cloud** | Python · TypeScript · SQL · Java · C++ · Go · Spark · Kafka · Snowflake · AWS (Bedrock, ECS, SageMaker, S3) · GCP (Vertex AI) |
@@ -185,32 +174,13 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kishorhange111&theme=github_dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kishorhange111&theme=default" />
-    <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kishorhange111&theme=default" alt="GitHub contribution overview" />
-  </picture>
-</p>
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=github_dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=default" />
-    <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=default" alt="GitHub stats" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=github_dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=default" />
-    <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=default" alt="Top languages by commit" />
-  </picture>
-</p>
-<p align="center">
-  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
     <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
   </picture>
 </p>
 
-<p align="center"><sub>B.Tech in Computer Science &amp; Engineering · DKTE Society's Textile and Engineering Institute, Ichalkaranji (2019–2023) · CGPA 8.31</sub></p>
+<p align="center"><sub>B.Tech CSE · DKTE Ichalkaranji (2019–2023) · CGPA 8.31</sub></p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg?v=4">
