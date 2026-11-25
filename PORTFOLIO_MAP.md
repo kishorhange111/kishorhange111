@@ -77,3 +77,10 @@ This guide maps **Forward Deployed Engineer (FDE)**, **AI Engineer**, **ML Syste
 - **Role progression:** Associate Software Engineer (Jul 2023 – Sep 2025) → Software Engineer (Sep 2025 – Present)
 - **Measured production wins:** **-38% inference latency** (quantization/pruning via ONNX Runtime & HF Optimum), **+9.5% classifier accuracy** (RF + custom Word2Vec + fine-tuned BERT)
 - **Systems shipped:** Automated LLM customer-support chatbot, RAG pipelines evaluated with Ragas & DeepEval, LangChain/CrewAI/n8n agentic workflows with MCP enterprise DB access, PEFT (LoRA/QLoRA) fine-tuning, Vertex AI semantic document matching, FastAPI/Airflow/Prometheus/Grafana monitoring, Spark/Hadoop/Kafka/Snowflake data pipelines.
+
+---
+
+## Open Source Contributions
+
+- **python/cpython** — [PR #148978](https://github.com/python/cpython/pull/148978) (**Merged**): `gh-148849: Deprecate http.cookies.BaseCookie.js_output()`
+- **sphinx-doc/sphinx** — [PR #14421](https://github.com/sphinx-doc/sphinx/pull/14421) (**Open**): `Fix #2835: Trigger rebuild when theme files change`

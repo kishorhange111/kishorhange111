@@ -5,132 +5,143 @@
 </picture>
 
 <p align="center">
+  <a href="https://kishorhange.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-kishorhange.vercel.app-1F2328?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
   <a href="https://www.linkedin.com/in/kishorhange/"><img src="https://img.shields.io/badge/LinkedIn-kishorhange-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://kishorhange.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-kishorhange.vercel.app-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
-  <a href="./PORTFOLIO_MAP.md"><img src="https://img.shields.io/badge/Competency_Map-PORTFOLIO__MAP.md-2B7A87?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Portfolio Competency Map" /></a>
+  <a href="./PORTFOLIO_MAP.md"><img src="https://img.shields.io/badge/Portfolio_Map-Role_Guide-2B7A87?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Portfolio Map" /></a>
+  <a href="https://github.com/python/cpython/pull/148978"><img src="https://img.shields.io/badge/Open_Source-CPython_PR-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Merged CPython PR" /></a>
   <a href="mailto:kishorhange46@gmail.com"><img src="https://img.shields.io/badge/Email-kishorhange46%40gmail.com-D97757?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
-## About
-
-**Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru) with **~4 years of experience** taking machine learning and LLM systems from prototype to production. I specialize in the engineering around the model — secure MCP tool layers, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps — so AI systems stay fast, measurable, and reliable once real customers depend on them. On the research side, I run controlled, multi-seed experiments from scratch — RL and RLVR (GRPO), mechanistic interpretability, grokking and scaling laws — and report null and negative results as carefully as wins.
+**Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru, **~4 YOE**) taking LLM and ML systems from prototype to production — specializing in secure MCP agent platforms, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps. Outside production systems, I run controlled multi-seed deep learning experiments (RLVR/GRPO, mechanistic interpretability, grokking, scaling laws) and publish null results as carefully as wins.
 
 ---
 
-## Core Engineering Pillars
+## Top 6 Flagship Systems
 
-| Pillar | Focus Areas |
-|---|---|
-| **FDE & Agentic Systems** | Multi-tenant MCP servers, RBAC/ACL policy enforcement, stateful DAG/LangGraph runtimes, TypeScript agent runtime (typed tools, loop guards, budgets, tracing), long-term agent memory, pass^k reliability evals, HITL approval workflows, PII & prompt-injection guardrails |
-| **Production RAG & Evals** | Hybrid BM25 + dense retrieval (RRF), knowledge graphs & entity linking for multi-hop QA, cross-encoder reranking, citation grounding, abstention, Ragas/DeepEval CI regression gates, statistical eval harnesses with bootstrap CIs |
-| **ML Systems & Inference** | Quantization (int8, NF4, AWQ), pruning, ONNX Runtime / Optimum, `torch.compile`, speculative decoding, KV-cache capacity planning, vLLM concurrency & TTFT/TPOT benchmarking |
-| **Distributed Training & MLOps** | PyTorch DDP & FSDP2, SFT / DPO / GRPO / QLoRA post-training, sharded checkpointing, gated MLflow registries, drift-triggered retraining, OpenTelemetry / Prometheus / Grafana |
-| **Research & Science of Deep Learning** | RL from scratch (DQN, PPO), RLVR (GRPO / Dr. GRPO / RLOO / DPO) with matched-compute controls and pass@k, mechanistic interpretability (probes, activation patching, sparse autoencoders), grokking progress measures, IsoFLOP scaling-law fits |
+> Hiring manager or recruiter? Open the [**Portfolio Competency Map (`PORTFOLIO_MAP.md`)**](./PORTFOLIO_MAP.md) for a 60-second role-based guide across **FDE**, **AI Engineer**, **ML Systems**, **Research**, and **MLOps**.
+
+| System | Architecture | Verified Proof |
+|---|---|---|
+| [**enterprise-mcp-agent-platform**](https://github.com/kishorhange111/enterprise-mcp-agent-platform) | Multi-tenant FDE & MCP platform: RBAC/row-level policies, PII & injection guardrails, SQL/REST/doc connectors, checkpointed DAG runtime, HITL approvals, OTel/Prometheus, Helm/K8s | **113 tests passing** · 20 PRs · red-team security suite + ADRs |
+| [**production-rag-service**](https://github.com/kishorhange111/production-rag-service) | Enterprise FastAPI hybrid RAG: multi-format ingestion, CDC queue, BM25 + dense RRF, calibrated reranking, fail-closed ACLs, citation verifier, SSE streaming, Helm/K8s | **80 tests passing** · **10/10** golden eval gate (1.00 faithfulness & recall@3) |
+| [**llm-evaluation-harness**](https://github.com/kishorhange111/llm-evaluation-harness) | Reproducible LLM benchmark harness (MMLU, ARC, HellaSwag, GSM8K, sandboxed HumanEval), position-bias-controlled LLM judge, bootstrap CIs & paired significance tests | **93 tests passing** · matches EleutherAI `lm-eval` within **0.5 pts** |
+| [**llm-inference-optimization**](https://github.com/kishorhange111/llm-inference-optimization) | Single-GPU & serving stack: int8/NF4/AWQ quantization, KV-cache paging, continuous batching, radix prefix cache, speculative decoding, vLLM TTFT/TPOT sweeps, OpenAI router | **55 tests passing** · end-to-end concurrency & latency benchmarks |
+| [**distributed-llm-training**](https://github.com/kishorhange111/distributed-llm-training) | Plain-PyTorch GPT-2 pre-training & alignment: DDP, FSDP2, DeepSpeed ZeRO-2/3 configs, bf16, `torch.compile`, LoRA/SFT/DPO/GRPO, atomic sharded checkpoints, K8s PyTorchJob | **57 tests passing** · **52% MFU** pre-training on A100 |
+| [**mcp-sql-agent**](https://github.com/kishorhange111/mcp-sql-agent) | LangGraph text-to-SQL agent behind an MCP server with layered `sqlglot` AST validation, SQLite authorizer, multi-tenant RLS, column masking & tamper-evident audit logs | **89 tests passing** · **89/89** attacks blocked, **0** leaks (65% exec acc on 1.5B) |
 
 ---
 
-## Production Impact at E2open
+## Production Impact @ E2open
 
 > **Software Engineer** (Sep 2025 – Present) · **Associate Software Engineer** (Jul 2023 – Sep 2025)
 
 - **38% lower inference latency** via quantization and pruning (ONNX Runtime, Hugging Face Optimum), saving a full delivery sprint.
-- **+9.5% classification accuracy** by replacing a legacy business-document classifier with a Random Forest on custom Word2Vec embeddings and fine-tuned BERT.
+- **+9.5% classification accuracy** replacing a legacy business-document classifier with Random Forest on custom Word2Vec embeddings and fine-tuned BERT.
 - **Enterprise MCP & Agentic Workflows:** Built agentic LLM workflows (LangChain, CrewAI, n8n) and **Model Context Protocol (MCP)** integrations for secure LLM access to enterprise databases.
-- **Production RAG & Support Automation:** Shipped an LLM customer-support ticket resolution chatbot and RAG pipelines (LangChain, FAISS, Chroma) evaluated with **Ragas** and **DeepEval** for faithfulness and relevance.
-- **Domain Fine-Tuning & Semantic Matching:** Fine-tuned multilingual/domain LLMs with PEFT (LoRA, QLoRA) tracked in MLflow & Comet ML, and built semantic document matching on GCP Vertex AI.
-- **Observability & Data Pipelines:** Built real-time model monitoring and feedback loops (FastAPI, Airflow, Prometheus, Grafana) alongside Spark, Hadoop, Kafka, and Snowflake pipelines.
+- **Production RAG, Fine-Tuning & Monitoring:** Shipped an automated customer-support LLM chatbot, RAG pipelines evaluated with **Ragas** & **DeepEval**, PEFT (LoRA/QLoRA) domain fine-tuning, Vertex AI semantic matching, and FastAPI / Airflow / Prometheus / Grafana monitoring alongside Spark, Kafka & Snowflake pipelines.
 
 ---
 
-## Flagship Portfolio
-
-> Hiring manager or recruiter? See the [**Portfolio Competency Map (`PORTFOLIO_MAP.md`)**](./PORTFOLIO_MAP.md) for a 60-second role-based guide mapping **FDE**, **AI Engineer**, **ML Systems**, **Research**, and **MLOps** competencies directly to repos and verified results.
-
-### 1. Enterprise FDE & Agentic Systems
-
-| Repository | Architecture & Measured Highlights |
-|---|---|
-| [**enterprise-mcp-agent-platform**](https://github.com/kishorhange111/enterprise-mcp-agent-platform) | Multi-tenant enterprise FDE platform: MCP server with read-only SQL/REST/doc connectors, RBAC & row-level policies, PII/prompt-injection guardrails, stateful checkpointed DAG runtime, HITL approval queue, immutable audit logs, OTel/Prometheus/Grafana, Helm/K8s & red-team security suite |
-| [**mcp-sql-agent**](https://github.com/kishorhange111/mcp-sql-agent) | LangGraph text-to-SQL agent behind an MCP server with layered AST (`sqlglot`) + SQLite authorizer guardrails — **89/89 attack queries blocked**, 0 protected values leaked, 39/60 (65%) execution accuracy with a local 1.5B model |
-| [**llm-reliability-gateway**](https://github.com/kishorhange111/llm-reliability-gateway) | Production LLM gateway: multi-provider fallback, failure-*rate* circuit breakers, full-jitter retries, per-tenant token buckets & budgets, exact/semantic cache, Prometheus — open-loop failure-injection sim shows fallback+breaker holds **100% availability** through a hanging outage with **64% fewer** wasted primary calls and **half the p95**; caught and fixed a breaker cascade (60% → 100%). Ships with Docker, K8s (HPA/PDB) and **Terraform for AWS ECS Fargate** (ECR, Secrets Manager, ALB, request-based autoscaling, SLO alarms) |
-| [**agent-runtime-ts**](https://github.com/kishorhange111/agent-runtime-ts) | **TypeScript** agent runtime on the Claude API: zod-typed tools (schema = validation), human approval for side-effecting tools, idempotent-only retries, timeouts, loop guard, step/cost budgets, OTel-shaped tracing, **MCP client adapter** (server tools gated by JSON-schema validation + approval) — guard eval on a misbehaving simulated agent: unsafe refunds **16.3% → 0**, runaway loops **16.3% → 0**, cost/episode **−83%** |
-| [**agent-memory-bench**](https://github.com/kishorhange111/agent-memory-bench) | Long-term agent memory benchmarked: recency vs BM25 vs embeddings vs fact store with supersession vs hybrid, on multi-session histories with updates and distractors — fact store hits **100% at 17 tokens**; extractor *confusion* costs ~2× more than misses (false writes supersede truth); hybrid recovers **+14 pts** from extraction misses |
-
-### 2. Production RAG, Retrieval & Evaluation
-
-| Repository | Architecture & Measured Highlights |
-|---|---|
-| [**production-rag-service**](https://github.com/kishorhange111/production-rag-service) | Production FastAPI RAG service: multi-format ingestion, hybrid BM25 + dense retrieval (RRF), cross-encoder reranking, ACL filtering, citation verification, abstention, SSE streaming, Prometheus metrics, Docker, and SQuAD 2.0 / faithfulness eval suite |
-| [**llm-evaluation-harness**](https://github.com/kishorhange111/llm-evaluation-harness) | Reproducible LLM benchmark harness (MMLU, ARC, HellaSwag, GSM8K, sandboxed HumanEval) with position-bias-controlled LLM-as-judge, bootstrap CIs, and paired significance tests — matches EleutherAI `lm-eval` within 0.5 pts |
-| [**embedding-finetuning-retrieval**](https://github.com/kishorhange111/embedding-finetuning-retrieval) | Domain embedding fine-tuning on BEIR FiQA: hard-negative mining, Matryoshka representation learning, int8 & binary vector compression, benchmarked against BM25 and the base bi-encoder |
-| [**graphrag-entity-linking**](https://github.com/kishorhange111/graphrag-entity-linking) | Multi-hop QA measured: single-shot vs iterative RAG vs a knowledge-graph pipeline (mention detection, 5 entity-linking strategies over homonyms/acronyms, relation extraction, traversal) — single-shot RAG answers **~1%** of 2-hop questions; entity-ID graph hops hit **100%** vs 88% for name-based iterative RAG; EL errors compound per hop (94% EL → 61% 3-hop) |
-| [**bedrock-serverless-rag**](https://github.com/kishorhange111/bedrock-serverless-rag) | Multi-tenant serverless RAG design for AWS (Terraform; offline-tested, not deployed): S3→SQS→Lambda idempotent ingestion (sha256 ledger + conditional writes, partial-batch retries, DLQ), OpenSearch k-NN with tenant *pre-filter*, Claude-on-Bedrock via the Anthropic SDK, Cognito-JWT tenant claims, Step Functions backfill, CloudWatch EMF cost/latency metrics — eval gate: **99.3%** answerable accuracy with **100%** correct abstention and **0** cross-tenant citations; sentence-level injection stripping recovered **0% → 100%** on poisoned docs; tests caught a cross-tenant chunk-ID collision |
-| [**llm-structured-extraction**](https://github.com/kishorhange111/llm-structured-extraction) | Receipt field extraction on CORD with a small local LLM: real OCR (`rapidocr`), free vs schema-constrained decoding (`xgrammar`), arithmetic/grounding checks, and a repair loop benchmarked against rule-based baselines |
-
-### 3. LLM Inference, Post-Training & Distributed Systems
-
-| Repository | Architecture & Measured Highlights |
-|---|---|
-| [**llm-inference-optimization**](https://github.com/kishorhange111/llm-inference-optimization) | Single-GPU & serving inference benchmarks: int8/NF4/AWQ quantization vs perplexity, SDPA, `torch.compile` + static KV cache, speculative decoding, KV-cache capacity planning, and vLLM concurrency sweeps (TTFT/TPOT percentiles) |
-| [**llm-capacity-planner**](https://github.com/kishorhange111/llm-capacity-planner) | GPU sizing from first principles: roofline cost model (FLOPs, HBM, KV-cache capacity, TP all-reduce) + continuous-batching simulator + SLO planner — long-context decode stays memory-bound at *any* batch (kv8 doubles throughput), GQA = **4×** concurrency, large prefill chunks inflate KV residency until admission collapses (86% vs 32% KV reserved), and some TTFT SLOs are infeasible at any load (TP2 beats two TP1 replicas for RAG) |
-| [**distributed-llm-training**](https://github.com/kishorhange111/distributed-llm-training) | GPT-2 pre-training stack in plain PyTorch: single GPU, DDP, and FSDP2 with bf16, `torch.compile`, activation checkpointing, and exact-resume sharded checkpoints — **52% MFU** on an A100 |
-| [**mini-chatgpt**](https://github.com/kishorhange111/mini-chatgpt) | End-to-end post-training from a base LLM (`Qwen2.5-0.5B`): 160k-conversation SFT (127M tokens) + DPO written from scratch (12k pairs) — matches Qwen Instruct on IFEval (**36.7 vs 36.3**) and beats it on ARC-Easy (**+5 pts**) in ~3 GPU-hours |
-| [**generative-ai-engineering**](https://github.com/kishorhange111/generative-ai-engineering) | 8 benchmarked LLM systems: QLoRA text-to-SQL (**60.0% → 66.2%**), 7B→0.5B distillation, function-calling agent (**16.7% → 94.8%** exact calls), GRPO on GSM8K, RAG eval, Qwen2-VL, Whisper Marathi (CER **53.6% → 14.7%**), and prompt-injection guardrails |
-
-### 4. Reinforcement Learning, Research & Agent Reliability
-
-| Repository | Architecture & Measured Highlights |
-|---|---|
-| [**rl-from-scratch**](https://github.com/kishorhange111/rl-from-scratch) | DQN (Double/Dueling/Polyak), PPO (GAE, clipping, vectorized envs, truncation bootstrap) and REINFORCE in PyTorch with math-level unit tests; 45-run, 5-seed benchmark reporting IQM and sample efficiency — PPO **5/5 seeds solve CartPole** (median 51.6k steps), Double DQN **5/5 on Acrobot** (20.8k steps) |
-| [**agent-reliability-bench**](https://github.com/kishorhange111/agent-reliability-bench) | τ-bench-style stateful tool-use benchmark: policy monitor (auth, cross-customer access, unconfirmed writes), final-state grading, **pass^k** reliability and fault injection, Claude adapter — shows pass^1 0.77 collapsing to **pass^8 0.32** at 10% tool faults |
-| [**rlvr-grpo-from-scratch**](https://github.com/kishorhange111/rlvr-grpo-from-scratch) | RL from verifiable rewards from scratch: SFT → GRPO / Dr. GRPO / RLOO / online DPO with a matched-step supervised control, 2 regimes × 3 seeds — RL **doubles pass@1 (18 → 34–38%) but leaves pass@16 flat** (sharpens, doesn't expand), gains track base coverage, KL anchor prevents collapse at high LR |
-| [**arithmetic-transformer-interp**](https://github.com/kishorhange111/arithmetic-transformer-interp) | Mechanistic interpretability of a transformer that learned addition: activation patching localises the carry to the `b0` position in block 1, moved to `=` in block 2; shows **probe-decodable ≠ causally used** (88.5% probe acc, 2% patching effect); TopK SAEs (99.97% CE recovered) find near-monosemantic carry features |
-| [**grokking-progress-measures**](https://github.com/kishorhange111/grokking-progress-measures) | Grokking on modular addition (Nanda et al. setup) with Fourier-sparsity and weight-norm progress measures — pilot: embedding Fourier sparsity rises **0.32 → 0.61** while test accuracy is still near chance (2.5% → 24%), i.e. hidden progress precedes generalisation; multi-seed wd × data-fraction sweep runs on Colab GPU (resumable) |
-| [**scaling-laws-from-scratch**](https://github.com/kishorhange111/scaling-laws-from-scratch) | Chinchilla-style IsoFLOP sweeps on byte-level GPTs (3k–2.6M params, 1e12–1e14 FLOPs) with approach-2 and parametric L(N, D) fits — pilot found batch size decides whether a compute-optimum exists at all: 4k-token batches step-starve larger models (minimum at the grid edge), 1k-token batches give an interior optimum at N≈25k |
-
-### 5. Applied ML, Causal Inference & MLOps
-
-| Repository | Architecture & Measured Highlights |
-|---|---|
-| [**demand-forecasting-mlops**](https://github.com/kishorhange111/demand-forecasting-mlops) | M5 retail forecasting (30,490 series, **WRMSSE 0.5536**, 35% below seasonal naive) with rolling-origin backtests, conformal prediction intervals, gated MLflow registry, drift-triggered retraining, and a monitored FastAPI service |
-| [**two-tower-recommender**](https://github.com/kishorhange111/two-tower-recommender) | Two-stage MovieLens 1M recommender: two-tower retrieval (in-batch softmax, logQ correction, item bias), FAISS index, LightGBM re-ranker, and FastAPI service — rigorously benchmarked against EASE and ItemKNN on a global temporal split |
-| [**uplift-targeting**](https://github.com/kishorhange111/uplift-targeting) | Causal uplift modeling on the Hillstrom randomized experiment: S, T, X, and DR learners vs response-model targeting, Qini curves with bootstrap CIs, budget constraints, and off-policy policy evaluation |
+## Explore More by Engineering Pillar
 
 <details>
-<summary><strong>More Projects (Deep Learning, Edge Compilation &amp; Observability)</strong></summary>
+<summary><strong>Agent Runtimes, Gateways &amp; Cloud RAG (5 repos)</strong></summary>
 
 | Repository | Highlights |
 |---|---|
-| [**deep-learning-portfolio**](https://github.com/kishorhange111/deep-learning-portfolio) | 14 CV, NLP & generative projects: BERT distillation + ONNX + int8 (**4.8× faster, 85% smaller**), GPT-2 LoRA (-69% GPU mem), ViT, U-Net, AdaIN, Music Transformer, molecule GPT |
-| [**cnn-edge-optimization-tflite-onnx-tvm**](https://github.com/kishorhange111/cnn-edge-optimization-tflite-onnx-tvm) | Edge compilation of a Keras CNN through TFLite, ONNX, and Apache TVM pipelines (**~12× smaller** models) |
+| [**llm-reliability-gateway**](https://github.com/kishorhange111/llm-reliability-gateway) | Multi-provider LLM gateway (fallback, failure-rate circuit breakers, jitter retries, per-tenant budgets, semantic cache, Docker/K8s/Terraform AWS ECS Fargate) — holds **100% availability** through hanging outages, **−64%** wasted calls, **0.5×** p95 |
+| [**agent-runtime-ts**](https://github.com/kishorhange111/agent-runtime-ts) | **TypeScript** Claude agent runtime with zod-typed tools, MCP client adapter, write-approval hooks, loop guards, budgets & OTel traces — unsafe refunds **16.3% → 0%**, cost/episode **−83%** |
+| [**agent-memory-bench**](https://github.com/kishorhange111/agent-memory-bench) | Multi-session agent memory benchmark (recency vs BM25 vs embeddings vs fact store with supersession vs hybrid) — fact store hits **100% at 17 tokens**; hybrid recovers **+14 pts** from extraction misses |
+| [**agent-reliability-bench**](https://github.com/kishorhange111/agent-reliability-bench) | τ-bench-style stateful tool-use benchmark with policy monitor, final-state grading & fault injection — exposes pass^1 **0.77 → pass^8 0.32** under 10% tool faults |
+| [**bedrock-serverless-rag**](https://github.com/kishorhange111/bedrock-serverless-rag) | Multi-tenant AWS serverless RAG design (Terraform: S3→SQS→Lambda, OpenSearch k-NN tenant pre-filter, Bedrock Claude, Cognito JWT, Step Functions) — **99.3%** accuracy, **100%** abstention, **0** cross-tenant leaks |
+
+</details>
+
+<details>
+<summary><strong>Retrieval, GraphRAG &amp; Structured Extraction (3 repos)</strong></summary>
+
+| Repository | Highlights |
+|---|---|
+| [**embedding-finetuning-retrieval**](https://github.com/kishorhange111/embedding-finetuning-retrieval) | Domain embedding fine-tuning on BEIR FiQA: hard-negative mining, Matryoshka representation learning, int8 & binary vector compression + FastAPI serving (**33 tests**) |
+| [**graphrag-entity-linking**](https://github.com/kishorhange111/graphrag-entity-linking) | Multi-hop QA benchmark (single-shot vs iterative RAG vs entity-linked knowledge graph) — entity-ID graph hops hit **100%** vs **88%** name-based iterative RAG and **~1%** single-shot |
+| [**llm-structured-extraction**](https://github.com/kishorhange111/llm-structured-extraction) | Receipt field extraction on CORD with a small local LLM: RapidOCR, free vs schema-constrained decoding (`xgrammar`), arithmetic/grounding checks, repair loop & FastAPI service (**45 tests**) |
+
+</details>
+
+<details>
+<summary><strong>LLM Post-Training, Capacity Planning &amp; Deep Learning Research (8 repos)</strong></summary>
+
+| Repository | Highlights |
+|---|---|
+| [**llm-capacity-planner**](https://github.com/kishorhange111/llm-capacity-planner) | Roofline cost model (FLOPs, HBM, KV cache, TP all-reduce) + continuous-batching simulator + SLO planner — kv8 doubles decode throughput, GQA gives **4×** concurrency |
+| [**mini-chatgpt**](https://github.com/kishorhange111/mini-chatgpt) | Base LLM (`Qwen2.5-0.5B`) → 160k SFT (127M tokens) → from-scratch DPO (12k pairs) — matches Qwen Instruct on IFEval (**36.7 vs 36.3**) and beats it on ARC-Easy (**+5 pts**) in ~3 GPU-hours |
+| [**generative-ai-engineering**](https://github.com/kishorhange111/generative-ai-engineering) | 8 benchmarked LLM systems: QLoRA text-to-SQL (**60.0% → 66.2%**), 7B→0.5B distillation, function-calling (**16.7% → 94.8%**), GRPO, Qwen2-VL, Whisper Marathi (CER **53.6% → 14.7%**), guardrails |
+| [**rl-from-scratch**](https://github.com/kishorhange111/rl-from-scratch) | Double/Dueling DQN, PPO (GAE, clipping, vectorized envs) & REINFORCE in PyTorch — 45-run 5-seed IQM benchmark (PPO **5/5** CartPole, Double DQN **5/5** Acrobot) |
+| [**rlvr-grpo-from-scratch**](https://github.com/kishorhange111/rlvr-grpo-from-scratch) | GRPO / Dr. GRPO / RLOO / online DPO with matched-compute controls — RL **doubles pass@1 (18% → 34–38%)** while leaving pass@16 flat |
+| [**arithmetic-transformer-interp**](https://github.com/kishorhange111/arithmetic-transformer-interp) | Activation patching & TopK SAEs (**99.97%** CE recovered) on addition transformers — shows **probe-decodable ≠ causally used** (88.5% probe acc vs 2% patching effect) |
+| [**grokking-progress-measures**](https://github.com/kishorhange111/grokking-progress-measures) | Modular-addition grokking with Fourier-sparsity progress measures — sparsity rises **0.32 → 0.61** while test accuracy is still near chance |
+| [**scaling-laws-from-scratch**](https://github.com/kishorhange111/scaling-laws-from-scratch) | Chinchilla-style IsoFLOP sweeps & parametric L(N, D) fits on byte-level GPTs — demonstrates batch-size step-starvation vs interior compute optimum |
+
+</details>
+
+<details>
+<summary><strong>Applied ML, Causal Inference, MLOps &amp; Edge Systems (7 repos)</strong></summary>
+
+| Repository | Highlights |
+|---|---|
+| [**demand-forecasting-mlops**](https://github.com/kishorhange111/demand-forecasting-mlops) | M5 retail forecasting (30,490 series, **WRMSSE 0.5536**, 35% below seasonal naive) with conformal intervals, drift retraining, gated MLflow registry & FastAPI |
+| [**two-tower-recommender**](https://github.com/kishorhange111/two-tower-recommender) | MovieLens 1M two-tower retrieval (logQ, item bias) + FAISS + LightGBM re-ranker & FastAPI benchmarked honestly against EASE & ItemKNN on a global temporal split |
+| [**uplift-targeting**](https://github.com/kishorhange111/uplift-targeting) | Causal uplift modeling on Hillstrom (S, T, X, DR learners vs response modeling), Qini bootstrap CIs, budgeted targeting & off-policy evaluation (**23 tests**) |
+| [**deep-learning-portfolio**](https://github.com/kishorhange111/deep-learning-portfolio) | 14 CV, NLP & generative projects: BERT distillation + ONNX + int8 (**4.8× faster, 85% smaller**), GPT-2 LoRA (−69% GPU mem), ViT, U-Net, Music Transformer |
+| [**cnn-edge-optimization-tflite-onnx-tvm**](https://github.com/kishorhange111/cnn-edge-optimization-tflite-onnx-tvm) | Edge compilation of a Keras CNN through TFLite, ONNX & Apache TVM (**~12× smaller** models) |
 | [**vm-energy-agent**](https://github.com/kishorhange111/vm-energy-agent) | Go monitoring agent estimating VM power consumption and exporting Prometheus / OpenTelemetry metrics |
-| [**llm-token-visualizer**](https://github.com/kishorhange111/llm-token-visualizer) | Interactive Streamlit app comparing tokenization across BERT, GPT-2, GPT-4, Phi-3, and DeepSeek |
+| [**llm-token-visualizer**](https://github.com/kishorhange111/llm-token-visualizer) | Interactive Streamlit app comparing tokenization across BERT, GPT-2, GPT-4, Phi-3 & DeepSeek |
+
+</details>
+
+<details>
+<summary><strong>Open Source Contributions (CPython, Sphinx)</strong></summary>
+
+| Project | PR | Status & Summary |
+|---|---|---|
+| **python/cpython** | [**#148978**](https://github.com/python/cpython/pull/148978) | **Merged** — `gh-148849: Deprecate http.cookies.BaseCookie.js_output()` |
+| **sphinx-doc/sphinx** | [**#14421**](https://github.com/sphinx-doc/sphinx/pull/14421) | **Open** — `Fix #2835: Trigger rebuild when theme files change` |
 
 </details>
 
 ---
 
-## Tech Stack
+## Core Engineering Stack
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,sklearn,fastapi,docker,kubernetes,gcp,aws,linux,git,postgres&perline=12" alt="Tech stack icons" />
-</p>
-
-- **GenAI & Agents:** LangChain · LangGraph · CrewAI · MCP · Hugging Face Transformers · PEFT (LoRA/QLoRA) · TRL (SFT/DPO/GRPO) · FAISS · Chroma · Ragas · DeepEval
-- **ML & Optimization:** PyTorch (DDP/FSDP2) · TensorFlow/Keras · scikit-learn · LightGBM · XGBoost · vLLM · ONNX Runtime · Hugging Face Optimum · TFLite · Apache TVM
-- **MLOps, Observability & Data:** FastAPI · Docker · Kubernetes · Helm · Terraform · AWS (ECS/ECR/ALB) · GitHub Actions · MLflow · Airflow · OpenTelemetry · Prometheus · Grafana · Spark · Kafka · Snowflake
-- **Cloud & Languages:** Python · TypeScript · SQL · Java · C++ · Go · GCP (Vertex AI) · AWS (Bedrock, SageMaker, S3)
+| Layer | Technologies |
+|---|---|
+| **Agents, RAG & Evals** | MCP · LangGraph · LangChain · CrewAI · FAISS · Chroma · OpenSearch · Ragas · DeepEval · `sqlglot` · `xgrammar` |
+| **Models, Training & Inference** | PyTorch (DDP, FSDP2) · Hugging Face Transformers · PEFT (LoRA, QLoRA) · TRL (SFT, DPO, GRPO) · vLLM · ONNX Runtime · Optimum · TFLite · Apache TVM · LightGBM · scikit-learn |
+| **Serving, Infra & Observability** | FastAPI · Docker · Kubernetes · Helm · Terraform · GitHub Actions · MLflow · Airflow · OpenTelemetry · Prometheus · Grafana |
+| **Languages, Data & Cloud** | Python · TypeScript · SQL · Java · C++ · Go · Spark · Kafka · Snowflake · AWS (Bedrock, ECS, SageMaker, S3) · GCP (Vertex AI) |
 
 ---
 
 ## GitHub Activity
 
 <p align="center">
-  <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kishorhange111&theme=tokyonight" alt="Contribution overview" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kishorhange111&theme=github_dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kishorhange111&theme=default" />
+    <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kishorhange111&theme=default" alt="GitHub contribution overview" />
+  </picture>
 </p>
 <p align="center">
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=tokyonight" alt="GitHub stats" />
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=tokyonight" alt="Top languages by commit" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=github_dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=default" />
+    <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kishorhange111&theme=default" alt="GitHub stats" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=github_dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=default" />
+    <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kishorhange111&theme=default" alt="Top languages by commit" />
+  </picture>
 </p>
 <p align="center">
   <picture>
