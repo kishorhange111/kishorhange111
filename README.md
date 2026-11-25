@@ -133,14 +133,16 @@
 </details>
 
 <details>
-<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (4 repos)</strong></summary>
+<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (6 repos)</strong></summary>
 
 | Repository | Highlights |
 |---|---|
-| [**triton-kernels-from-scratch**](https://github.com/kishorhange111/triton-kernels-from-scratch) | FlashAttention-2 forward + two-kernel backward, fused softmax & RMSNorm in **Triton** — values and gradients verified vs PyTorch (CI runs the real kernels in Triton's interpreter), benchmarked on GPU |
+| [**triton-kernels-from-scratch**](https://github.com/kishorhange111/triton-kernels-from-scratch) | FlashAttention-2 forward + two-kernel backward, fused softmax & RMSNorm in **Triton** — values and gradients verified vs PyTorch (CI runs the real kernels in Triton's interpreter); on a T4 the fused RMSNorm hits **~230 GB/s (9× eager)** and a PTX diagnosis shows why attention lags (no `mma` emitted on sm75) |
 | [**moe-from-scratch**](https://github.com/kishorhange111/moe-from-scratch) | Mixture-of-Experts: top-k & expert-choice routing, capacity/token dropping (GShard priority), Switch balance + z-loss, shared experts, batched `(E, C, d)` experts — dense vs MoE at equal active params |
-| [**sparse-autoencoders-interp**](https://github.com/kishorhange111/sparse-autoencoders-interp) | TopK / BatchTopK / L1 sparse autoencoders with AuxK — ground-truth feature recovery on a superposition toy model and CE-loss-recovered splicing on GPT-2 |
+| [**sparse-autoencoders-interp**](https://github.com/kishorhange111/sparse-autoencoders-interp) | TopK / BatchTopK / L1 sparse autoencoders with AuxK — on a superposition toy model TopK recovers **100%** of ground-truth features while L1 recovers ~0% despite lower FVU; CE-loss-recovered splicing on GPT-2 |
 | [**ssm-from-scratch**](https://github.com/kishorhange111/ssm-from-scratch) | Mamba-2 from scratch: sequential, parallel-scan and chunked **SSD** algorithms (verified identical, incl. the attention duality), O(1) recurrent decoding — vs attention on associative recall, LM and decode cost |
+| [**long-context-rope-scaling**](https://github.com/kishorhange111/long-context-rope-scaling) | RoPE context extension from scratch — Position Interpolation, NTK-aware, dynamic NTK and **YaRN** (ramp + attention temperature), each pinned by a property test; length extrapolation and passkey retrieval to 16× the trained length, zero-shot and after a short fine-tune |
+| [**optimizers-from-scratch**](https://github.com/kishorhange111/optimizers-from-scratch) | AdamW, Lion, Adafactor and **Muon** (Newton–Schulz orthogonalisation) from their papers — verified against defining properties, then compared on a GPT for lr sensitivity, loss, optimizer-state memory and step time |
 
 </details>
 
