@@ -75,15 +75,15 @@ def f(v):
 
 # --------------------------------------------------------------- geometry
 def make_points(seed=7):
-    """Three loose clusters inside the constellation box (x 566-908, y 44-246)."""
+    """Three loose clusters inside the constellation box (x 566-908, y 38-226)."""
     rng = random.Random(seed)
-    clusters = [((650, 96), "mcp / agents"), ((834, 108), "hybrid rag"), ((744, 202), "ml systems")]
+    clusters = [((650, 90), "mcp / agents"), ((834, 102), "hybrid rag"), ((744, 188), "ml systems")]
     pts = []
     for (cx, cy), _ in clusters:
         placed = 0
         while placed < 13:
-            x, y = rng.gauss(cx, 40), rng.gauss(cy, 30)
-            if not (566 <= x <= 908 and 44 <= y <= 246):
+            x, y = rng.gauss(cx, 40), rng.gauss(cy, 28)
+            if not (566 <= x <= 908 and 38 <= y <= 226):
                 continue
             if any(math.dist((x, y), p) < 15 for p in pts):
                 continue
@@ -185,15 +185,10 @@ def header(p):
            f'keyTimes="0;{delay / (delay + dur):.3f};1" calcMode="spline" keySplines="0 0 1 1;{EASE_OUT}" '
            f'dur="{delay + dur:.2f}s" fill="freeze"/>' if dy else ""))
 
-    pills_svg = "\n".join([
-        pill(44, 186, 148, "E2open · ~4 YOE", p, accent_dot=True),
-        pill(200, 186, 174, "CPython Contributor", p, accent_dot=False),
-        pill(44, 218, 152, "100+ Merged PRs", p, accent_dot=False),
-        pill(204, 218, 182, "588+ Automated Tests", p, accent_dot=True),
-    ])
+    pills_svg = ""
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">
-  <title id="t">Kishor Hange: Forward Deployed, ML and AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise MCP agents, production RAG, LLM evals, inference optimization, and distributed training.</title>
+  <title id="t">Kishor Hange: Forward Deployed, ML and AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise Agents (MCP), Hybrid RAG, LLM Evals, Inference and Distributed Training.</title>
   <style>
     @media (max-width: 520px) {{ .topics {{ display: none; }} .idle {{ opacity: 0.45; }} }}
     @media (prefers-reduced-motion: reduce) {{ * {{ animation: none !important; }} }}
@@ -224,8 +219,8 @@ def header(p):
     <rect x="520" y="0" width="440" height="{H}" fill="url(#dotGrid)"/>
 
     <!-- ambient: layered radial depth glow behind constellation (never behind name), 36 s drift -->
-    <ellipse cx="810" cy="88" rx="190" ry="120" fill="url(#depthGlow)" opacity="{a0}"/>
-    <ellipse cx="748" cy="146" rx="215" ry="132" fill="url(#aurora)" opacity="{a0}">
+    <ellipse cx="810" cy="84" rx="190" ry="116" fill="url(#depthGlow)" opacity="{a0}"/>
+    <ellipse cx="748" cy="140" rx="215" ry="128" fill="url(#aurora)" opacity="{a0}">
       <animate attributeName="opacity" values="{a0};{a1};{a0}" dur="36s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
       <animateTransform attributeName="transform" type="translate" values="-16 0;16 0;-16 0" dur="36s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
     </ellipse>
@@ -245,23 +240,16 @@ def header(p):
 
     <!-- primary: retrieval, query -> top-5 neighbours -->
 {chr(10).join(loops)}
-    <text x="920" y="272" text-anchor="end" font-family="{MONO}" font-size="11" fill="{p["muted"]}" opacity="0.85">retrieve(q, k=5)</text>
+    <text x="920" y="268" text-anchor="end" font-family="{MONO}" font-size="11" fill="{p["muted"]}" opacity="0.82">retrieve(q, k=5)</text>
 
     <!-- left editorial identity -->
-    <g>
-      <circle cx="49" cy="48" r="3" fill="{p["accent"]}"/>
-      <text x="60" y="52" font-family="{MONO}" font-size="11" letter-spacing="1.6" fill="{p["accent"]}" font-weight="600">PRODUCTION AI SYSTEMS · BENGALURU, IN</text>
-    </g>
     <text x="44" y="114" font-family="{SANS}" font-size="64" font-weight="600" letter-spacing="-1.6" fill="{p["name"]}">Kishor Hange{intro(0.12, 0.85, 8)}</text>
-    <text x="44" y="148" font-family="{SANS}" font-size="20.5" font-weight="500" fill="{p["muted"]}">Forward Deployed · ML &amp; AI Engineer{intro(0.25, 0.85, 6)}</text>
-    <rect x="44" y="166" width="44" height="2.5" rx="1.25" fill="{p["accent"]}" opacity="0.95">{intro(0.4, 0.6, 0)}</rect>
+    <text x="44" y="150" font-family="{SANS}" font-size="21" font-weight="500" fill="{p["muted"]}">Forward Deployed, ML &amp; AI Engineer{intro(0.25, 0.85, 6)}</text>
+    <text x="44" y="178" font-family="{SANS}" font-size="15.5" fill="{p["muted"]}" opacity="0.86">E2open · Bengaluru · ~4 YOE{intro(0.35, 0.75, 4)}</text>
+    <rect x="44" y="198" width="42" height="2.5" rx="1.25" fill="{p["accent"]}" opacity="0.92">{intro(0.45, 0.6, 0)}</rect>
 
-    <!-- proof pills -->
-    <g class="pills">
-{pills_svg}
-    </g>
-
-    <text class="topics" x="44" y="272" font-family="{MONO}" font-size="11.5" letter-spacing="0.9" fill="{p["muted"]}" opacity="0.88">MCP AGENTS · HYBRID RAG · LLM EVALS · INFERENCE · FSDP2{intro(0.65, 0.6, 0)}</text>
+    <!-- understated domain line -->
+    <text class="topics" x="44" y="268" font-family="{MONO}" font-size="11" letter-spacing="0.4" fill="{p["muted"]}" opacity="0.86">Enterprise Agents (MCP) · Hybrid RAG · LLM Evals · Inference &amp; Distributed Training{intro(0.6, 0.6, 0)}</text>
   </g>
 
   <!-- crisp hairline card border -->
@@ -376,26 +364,25 @@ def kpi(p):
     W, H = 960, 112
     cards = [
         ("−38%", "Inference Latency", "ONNX Runtime &amp; Optimum · E2open", p["accent"]),
-        ("+9.5%", "Classifier Accuracy", "Custom Word2Vec + RF &amp; BERT · E2open", p["teal"]),
-        ("588+ Tests · 100+ PRs", "Verified Engineering", "9 Production Repos + CPython PR", p["accent"]),
+        ("+9.5%", "Classifier Accuracy", "Word2Vec + RF &amp; Fine-Tuned BERT · E2open", p["teal"]),
+        ("CPython", "Open-Source Contributor", "Merged python/cpython#148978 · Production AI/ML", p["accent"]),
     ]
     cw, ch, gap = 308, 108, 16
     xs = [2, 2 + cw + gap, 2 + 2 * (cw + gap)]
     blocks = []
     for x, (metric, label, sub, color) in zip(xs, cards):
         cx = x + cw / 2
-        fs = "22" if len(metric) > 10 else "27"
         blocks.append(
             f'  <g>\n'
             f'    <rect x="{x}" y="2" width="{cw}" height="{ch}" rx="14" fill="{p["card_bg"]}" fill-opacity="{p["card_op"]}" stroke="{p["border"]}" stroke-width="1"/>\n'
             f'    <rect x="{cx - 16:.0f}" y="14" width="32" height="2.5" rx="1.25" fill="{color}" opacity="0.9"/>\n'
-            f'    <text x="{cx:.0f}" y="52" text-anchor="middle" font-family="{SANS}" font-size="{fs}" font-weight="600" letter-spacing="-0.6" fill="{color}">{metric}</text>\n'
+            f'    <text x="{cx:.0f}" y="52" text-anchor="middle" font-family="{SANS}" font-size="26" font-weight="600" letter-spacing="-0.6" fill="{color}">{metric}</text>\n'
             f'    <text x="{cx:.0f}" y="76" text-anchor="middle" font-family="{SANS}" font-size="13.5" font-weight="500" fill="{p["name"]}">{label}</text>\n'
-            f'    <text x="{cx:.0f}" y="95" text-anchor="middle" font-family="{MONO}" font-size="10.5" fill="{p["muted"]}">{sub}</text>\n'
+            f'    <text x="{cx:.0f}" y="95" text-anchor="middle" font-family="{MONO}" font-size="9.8" fill="{p["muted"]}">{sub}</text>\n'
             f'  </g>'
         )
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">
-  <title id="t">Key Impact Metrics: -38% Inference Latency at E2open, +9.5% Classifier Accuracy at E2open, 588+ Tests and 100+ PRs across 9 production repos plus a merged CPython PR.</title>
+  <title id="t">Key Impact: -38% Inference Latency at E2open, +9.5% Classifier Accuracy at E2open, and CPython Open-Source Contributor (merged python/cpython#148978).</title>
 {chr(10).join(blocks)}
 </svg>
 """
