@@ -1,23 +1,23 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=6">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=6">
-  <img alt="Kishor Hange — Forward Deployed, ML & AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise MCP agents, production RAG, LLM evals, inference optimization, and distributed training." src="./assets/header-light.svg?v=6" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=7">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=7">
+  <img alt="Kishor Hange — Forward Deployed, ML & AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise Agents (MCP), Hybrid RAG, LLM Evals, Inference and Distributed Training." src="./assets/header-light.svg?v=7" width="100%">
 </picture>
 
 <p align="center">
-  <a href="https://kishorhange.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-1F2328?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/kishorhange/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="./PORTFOLIO_MAP.md"><img src="https://img.shields.io/badge/Portfolio_Map-2B7A87?style=flat-square&logo=readthedocs&logoColor=white" alt="Portfolio Map" /></a>
-  <a href="https://github.com/python/cpython/pull/148978"><img src="https://img.shields.io/badge/CPython_PR-3776AB?style=flat-square&logo=python&logoColor=white" alt="CPython PR" /></a>
-  <a href="mailto:kishorhange46@gmail.com"><img src="https://img.shields.io/badge/Email-D97757?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://kishorhange.vercel.app/">Portfolio</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/kishorhange/">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="./PORTFOLIO_MAP.md">Portfolio Map</a> &nbsp;·&nbsp;
+  <a href="https://github.com/python/cpython/pull/148978">CPython PR #148978</a> &nbsp;·&nbsp;
+  <a href="mailto:kishorhange46@gmail.com">Email</a>
 </p>
 
 **Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru, **~4 YOE**) taking LLM and ML systems from prototype to production — specializing in secure MCP agent platforms, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps. Outside production systems, I run controlled multi-seed deep learning experiments (RLVR/GRPO, mechanistic interpretability, grokking, scaling laws) and report null results as carefully as wins.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/kpi-dark.svg?v=1">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/kpi-light.svg?v=1">
-  <img alt="Impact Highlights: -38% Inference Latency at E2open, +9.5% Classifier Accuracy at E2open, 588+ Tests and 100+ PRs across 9 production repos plus a merged CPython PR." src="./assets/kpi-light.svg?v=1" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/kpi-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/kpi-light.svg?v=2">
+  <img alt="Key Impact: -38% Inference Latency at E2open, +9.5% Classifier Accuracy at E2open, and CPython Open-Source Contributor (merged python/cpython#148978)." src="./assets/kpi-light.svg?v=2" width="100%">
 </picture>
 
 ---
@@ -29,50 +29,50 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/FDE_%C2%B7_MCP_PLATFORM-D97757?style=flat-square" alt="FDE MCP Platform" /><br/>
+      <sub>FDE · MCP PLATFORM</sub><br/>
       <a href="https://github.com/kishorhange111/enterprise-mcp-agent-platform"><strong>enterprise-mcp-agent-platform</strong></a><br/>
-      <sub>Multi-tenant MCP platform with RBAC, PII/injection guardrails, SQL/REST/doc connectors, HITL approvals &amp; Helm/K8s.</sub><br/><br/>
-      <code>MCP</code> <code>FastAPI</code> <code>OTel</code> <code>Helm</code><br/>
-      <strong>113 tests · 20 PRs · Red-team suite</strong>
+      <sub>Multi-tenant MCP platform with RBAC/RLS policy enforcement, PII &amp; injection guardrails, SQL/REST/doc connectors, HITL approvals, and audit logging.</sub><br/><br/>
+      <sub>MCP · FastAPI · OpenTelemetry · Helm / K8s</sub><br/>
+      <strong>RBAC/RLS · HITL approvals · Red-team security suite</strong>
     </td>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/PRODUCTION_HYBRID_RAG-2B7A87?style=flat-square" alt="Production Hybrid RAG" /><br/>
+      <sub>PRODUCTION HYBRID RAG</sub><br/>
       <a href="https://github.com/kishorhange111/production-rag-service"><strong>production-rag-service</strong></a><br/>
-      <sub>FastAPI hybrid RAG with CDC ingestion, BM25 + dense RRF, calibrated reranking, fail-closed ACLs &amp; citation checks.</sub><br/><br/>
-      <code>FastAPI</code> <code>FAISS</code> <code>Reranker</code> <code>K8s</code><br/>
-      <strong>80 tests · 10/10 eval gate (1.00 faithful)</strong>
+      <sub>FastAPI hybrid RAG with multi-format CDC ingestion, BM25 + dense RRF, calibrated reranking, fail-closed ACL filtering, and SSE streaming.</sub><br/><br/>
+      <sub>FastAPI · BM25 + FAISS · Reranker · Prometheus</sub><br/>
+      <strong>1.00 faithfulness &amp; recall@3 golden eval gate</strong>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/LLM_EVALUATION-57606A?style=flat-square" alt="LLM Evaluation" /><br/>
+      <sub>LLM EVALUATION</sub><br/>
       <a href="https://github.com/kishorhange111/llm-evaluation-harness"><strong>llm-evaluation-harness</strong></a><br/>
-      <sub>Reproducible eval suite (MMLU, ARC, HellaSwag, GSM8K, HumanEval) with bias-controlled LLM judge &amp; bootstrap CIs.</sub><br/><br/>
-      <code>PyTorch</code> <code>Stats</code> <code>Sandboxed Exec</code> <code>CI</code><br/>
-      <strong>93 tests · Within 0.5 pts of lm-eval</strong>
+      <sub>Reproducible benchmark harness covering MMLU, ARC, HellaSwag, GSM8K, and sandboxed HumanEval with position-bias-controlled LLM judging.</sub><br/><br/>
+      <sub>PyTorch · Bootstrap CIs · Paired Tests · Sandboxed Exec</sub><br/>
+      <strong>Matches EleutherAI lm-eval within 0.5 pts</strong>
     </td>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/INFERENCE_OPTIMIZATION-B4532F?style=flat-square" alt="Inference Optimization" /><br/>
+      <sub>INFERENCE OPTIMIZATION</sub><br/>
       <a href="https://github.com/kishorhange111/llm-inference-optimization"><strong>llm-inference-optimization</strong></a><br/>
-      <sub>Serving &amp; GPU optimization: int8/NF4/AWQ quantization, KV paging, continuous batching, speculative decoding &amp; vLLM.</sub><br/><br/>
-      <code>vLLM</code> <code>PyTorch</code> <code>Quantization</code> <code>FastAPI</code><br/>
-      <strong>55 tests · TTFT/TPOT latency sweeps</strong>
+      <sub>Single-GPU &amp; serving stack: int8/NF4/AWQ quantization, KV-cache paging, continuous batching, radix prefix caching, and speculative decoding.</sub><br/><br/>
+      <sub>vLLM · PyTorch · Quantization · FastAPI</sub><br/>
+      <strong>vLLM TTFT/TPOT sweeps · OpenAI-compatible router</strong>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/DISTRIBUTED_TRAINING-2B7A87?style=flat-square" alt="Distributed Training" /><br/>
+      <sub>DISTRIBUTED TRAINING</sub><br/>
       <a href="https://github.com/kishorhange111/distributed-llm-training"><strong>distributed-llm-training</strong></a><br/>
-      <sub>Plain-PyTorch GPT-2 training &amp; alignment: DDP, FSDP2, ZeRO-2/3 configs, bf16, LoRA/SFT/DPO/GRPO &amp; atomic checkpoints.</sub><br/><br/>
-      <code>PyTorch</code> <code>DDP</code> <code>FSDP2</code> <code>MLflow</code><br/>
-      <strong>57 tests · 52% MFU on A100</strong>
+      <sub>Plain-PyTorch GPT-2 pre-training and alignment stack supporting DDP, FSDP2, ZeRO-2/3 configs, bf16, LoRA/SFT/DPO/GRPO, and K8s PyTorchJob.</sub><br/><br/>
+      <sub>PyTorch · DDP · FSDP2 · MLflow</sub><br/>
+      <strong>52% MFU pre-training on A100 · Exact-resume shards</strong>
     </td>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/MCP_%C2%B7_SQL_SECURITY-D97757?style=flat-square" alt="MCP SQL Security" /><br/>
+      <sub>MCP · SQL SECURITY</sub><br/>
       <a href="https://github.com/kishorhange111/mcp-sql-agent"><strong>mcp-sql-agent</strong></a><br/>
-      <sub>LangGraph text-to-SQL agent behind an MCP server with sqlglot AST guards, SQLite authorizer, RLS &amp; audit logs.</sub><br/><br/>
-      <code>MCP</code> <code>LangGraph</code> <code>sqlglot</code> <code>RLS</code><br/>
-      <strong>89 tests · 89/89 attacks blocked</strong>
+      <sub>LangGraph text-to-SQL agent behind an MCP server with layered sqlglot AST policy guards, SQLite authorizer, multi-tenant RLS, and audit logs.</sub><br/><br/>
+      <sub>MCP · LangGraph · sqlglot · Row-Level Security</sub><br/>
+      <strong>89/89 SQL attacks blocked · 0 protected leaks</strong>
     </td>
   </tr>
 </table>
@@ -110,9 +110,9 @@
 
 | Repository | Highlights |
 |---|---|
-| [**embedding-finetuning-retrieval**](https://github.com/kishorhange111/embedding-finetuning-retrieval) | Domain embedding fine-tuning on BEIR FiQA: hard-negative mining, Matryoshka representation learning, int8 & binary vector compression + FastAPI serving (**33 tests**) |
+| [**embedding-finetuning-retrieval**](https://github.com/kishorhange111/embedding-finetuning-retrieval) | Domain embedding fine-tuning on BEIR FiQA: hard-negative mining, Matryoshka representation learning, int8 & binary vector compression + FastAPI serving |
 | [**graphrag-entity-linking**](https://github.com/kishorhange111/graphrag-entity-linking) | Multi-hop QA benchmark (single-shot vs iterative RAG vs entity-linked knowledge graph) — entity-ID graph hops hit **100%** vs **88%** name-based iterative RAG and **~1%** single-shot |
-| [**llm-structured-extraction**](https://github.com/kishorhange111/llm-structured-extraction) | Receipt field extraction on CORD with a small local LLM: RapidOCR, free vs schema-constrained decoding (`xgrammar`), arithmetic/grounding checks, repair loop & FastAPI service (**45 tests**) |
+| [**llm-structured-extraction**](https://github.com/kishorhange111/llm-structured-extraction) | Receipt field extraction on CORD with a small local LLM: RapidOCR, free vs schema-constrained decoding (xgrammar), arithmetic/grounding checks, repair loop & FastAPI service |
 
 </details>
 
@@ -139,7 +139,7 @@
 |---|---|
 | [**demand-forecasting-mlops**](https://github.com/kishorhange111/demand-forecasting-mlops) | M5 retail forecasting (30,490 series, **WRMSSE 0.5536**, 35% below seasonal naive) with conformal intervals, drift retraining, gated MLflow registry & FastAPI |
 | [**two-tower-recommender**](https://github.com/kishorhange111/two-tower-recommender) | MovieLens 1M two-tower retrieval (logQ, item bias) + FAISS + LightGBM re-ranker & FastAPI benchmarked honestly against EASE & ItemKNN on a global temporal split |
-| [**uplift-targeting**](https://github.com/kishorhange111/uplift-targeting) | Causal uplift modeling on Hillstrom (S, T, X, DR learners vs response modeling), Qini bootstrap CIs, budgeted targeting & off-policy evaluation (**23 tests**) |
+| [**uplift-targeting**](https://github.com/kishorhange111/uplift-targeting) | Causal uplift modeling on Hillstrom (S, T, X, DR learners vs response modeling), Qini bootstrap CIs, budgeted targeting & off-policy evaluation |
 | [**deep-learning-portfolio**](https://github.com/kishorhange111/deep-learning-portfolio) | 14 CV, NLP & generative projects: BERT distillation + ONNX + int8 (**4.8× faster, 85% smaller**), GPT-2 LoRA (−69% GPU mem), ViT, U-Net, Music Transformer |
 | [**cnn-edge-optimization-tflite-onnx-tvm**](https://github.com/kishorhange111/cnn-edge-optimization-tflite-onnx-tvm) | Edge compilation of a Keras CNN through TFLite, ONNX & Apache TVM (**~12× smaller** models) |
 | [**vm-energy-agent**](https://github.com/kishorhange111/vm-energy-agent) | Go monitoring agent estimating VM power consumption and exporting Prometheus / OpenTelemetry metrics |
@@ -170,20 +170,4 @@
 
 ---
 
-## GitHub Activity
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
-    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/kishorhange111/kishorhange111/output/github-snake.svg" />
-  </picture>
-</p>
-
-<p align="center"><sub>B.Tech CSE · DKTE Ichalkaranji (2019–2023) · CGPA 8.31</sub></p>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg?v=4">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg?v=4">
-  <img alt="Thanks for visiting. Kishor Hange, Bengaluru, IN — FDE, ML & AI Systems" src="./assets/footer-light.svg?v=4" width="100%">
-</picture>
+<p align="center"><sub>B.Tech in Computer Science &amp; Engineering · DKTE Ichalkaranji (2019–2023) · CGPA 8.31 · Bengaluru, India</sub></p>
