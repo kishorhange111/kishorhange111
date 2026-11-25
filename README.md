@@ -12,22 +12,81 @@
   <a href="mailto:kishorhange46@gmail.com"><img src="https://img.shields.io/badge/Email-kishorhange46%40gmail.com-D97757?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
-**Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru, **~4 YOE**) taking LLM and ML systems from prototype to production — specializing in secure MCP agent platforms, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps. Outside production systems, I run controlled multi-seed deep learning experiments (RLVR/GRPO, mechanistic interpretability, grokking, scaling laws) and publish null results as carefully as wins.
+**Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru, **~4 YOE**) taking LLM and ML systems from prototype to production — specializing in secure MCP agent platforms, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps. Outside production systems, I run controlled multi-seed deep learning experiments (RLVR/GRPO, mechanistic interpretability, grokking, scaling laws) and report null results as carefully as wins.
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <h3><code>−38%</code> Inference Latency</h3>
+      <sub>ONNX Runtime &amp; HF Optimum quantization/pruning @ <strong>E2open</strong></sub>
+    </td>
+    <td align="center" width="33%">
+      <h3><code>+9.5%</code> Classifier Accuracy</h3>
+      <sub>Custom Word2Vec + RF &amp; fine-tuned BERT @ <strong>E2open</strong></sub>
+    </td>
+    <td align="center" width="33%">
+      <h3><code>588+</code> Tests · <code>100+</code> PRs</h3>
+      <sub>9 production codebases + merged <strong>CPython</strong> PR</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Top 6 Flagship Systems
+## Flagship Systems
 
 > Hiring manager or recruiter? Open the [**Portfolio Competency Map (`PORTFOLIO_MAP.md`)**](./PORTFOLIO_MAP.md) for a 60-second role-based guide across **FDE**, **AI Engineer**, **ML Systems**, **Research**, and **MLOps**.
 
-| System | Architecture | Verified Proof |
-|---|---|---|
-| [**enterprise-mcp-agent-platform**](https://github.com/kishorhange111/enterprise-mcp-agent-platform) | Multi-tenant FDE & MCP platform: RBAC/row-level policies, PII & injection guardrails, SQL/REST/doc connectors, checkpointed DAG runtime, HITL approvals, OTel/Prometheus, Helm/K8s | **113 tests passing** · 20 PRs · red-team security suite + ADRs |
-| [**production-rag-service**](https://github.com/kishorhange111/production-rag-service) | Enterprise FastAPI hybrid RAG: multi-format ingestion, CDC queue, BM25 + dense RRF, calibrated reranking, fail-closed ACLs, citation verifier, SSE streaming, Helm/K8s | **80 tests passing** · **10/10** golden eval gate (1.00 faithfulness & recall@3) |
-| [**llm-evaluation-harness**](https://github.com/kishorhange111/llm-evaluation-harness) | Reproducible LLM benchmark harness (MMLU, ARC, HellaSwag, GSM8K, sandboxed HumanEval), position-bias-controlled LLM judge, bootstrap CIs & paired significance tests | **93 tests passing** · matches EleutherAI `lm-eval` within **0.5 pts** |
-| [**llm-inference-optimization**](https://github.com/kishorhange111/llm-inference-optimization) | Single-GPU & serving stack: int8/NF4/AWQ quantization, KV-cache paging, continuous batching, radix prefix cache, speculative decoding, vLLM TTFT/TPOT sweeps, OpenAI router | **55 tests passing** · end-to-end concurrency & latency benchmarks |
-| [**distributed-llm-training**](https://github.com/kishorhange111/distributed-llm-training) | Plain-PyTorch GPT-2 pre-training & alignment: DDP, FSDP2, DeepSpeed ZeRO-2/3 configs, bf16, `torch.compile`, LoRA/SFT/DPO/GRPO, atomic sharded checkpoints, K8s PyTorchJob | **57 tests passing** · **52% MFU** pre-training on A100 |
-| [**mcp-sql-agent**](https://github.com/kishorhange111/mcp-sql-agent) | LangGraph text-to-SQL agent behind an MCP server with layered `sqlglot` AST validation, SQLite authorizer, multi-tenant RLS, column masking & tamper-evident audit logs | **89 tests passing** · **89/89** attacks blocked, **0** leaks (65% exec acc on 1.5B) |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="https://img.shields.io/badge/FDE_%C2%B7_MCP_PLATFORM-D97757?style=flat-square" alt="FDE MCP Platform" /><br/>
+      <a href="https://github.com/kishorhange111/enterprise-mcp-agent-platform"><strong>enterprise-mcp-agent-platform</strong></a><br/>
+      <sub>Multi-tenant FDE &amp; MCP platform: RBAC/row-level policies, PII &amp; injection guardrails, SQL/REST/doc connectors, checkpointed DAG runtime, HITL approvals, OTel/Prometheus, Helm/K8s.</sub><br/><br/>
+      <code>MCP</code> <code>FastAPI</code> <code>OTel</code> <code>Helm/K8s</code><br/>
+      <strong>113 tests passing</strong> · 20 PRs · Red-team security suite + ADRs
+    </td>
+    <td width="50%" valign="top">
+      <img src="https://img.shields.io/badge/PRODUCTION_HYBRID_RAG-2B7A87?style=flat-square" alt="Production Hybrid RAG" /><br/>
+      <a href="https://github.com/kishorhange111/production-rag-service"><strong>production-rag-service</strong></a><br/>
+      <sub>Enterprise FastAPI RAG: multi-format ingestion, CDC queue, BM25 + dense RRF, calibrated reranking, fail-closed ACLs, citation verifier, SSE streaming, CI eval gate, Helm/K8s.</sub><br/><br/>
+      <code>FastAPI</code> <code>BM25+FAISS</code> <code>Reranker</code> <code>Prometheus</code><br/>
+      <strong>80 tests passing</strong> · <strong>10/10</strong> golden eval gate (1.00 faithfulness)
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="https://img.shields.io/badge/LLM_EVALUATION-57606A?style=flat-square" alt="LLM Evaluation" /><br/>
+      <a href="https://github.com/kishorhange111/llm-evaluation-harness"><strong>llm-evaluation-harness</strong></a><br/>
+      <sub>Reproducible LLM benchmark harness (MMLU, ARC, HellaSwag, GSM8K, sandboxed HumanEval), position-bias-controlled LLM-as-judge, bootstrap CIs &amp; paired significance tests.</sub><br/><br/>
+      <code>PyTorch</code> <code>Statistics</code> <code>Sandboxed_Exec</code> <code>CI</code><br/>
+      <strong>93 tests passing</strong> · Matches EleutherAI <code>lm-eval</code> within <strong>0.5 pts</strong>
+    </td>
+    <td width="50%" valign="top">
+      <img src="https://img.shields.io/badge/INFERENCE_OPTIMIZATION-B4532F?style=flat-square" alt="Inference Optimization" /><br/>
+      <a href="https://github.com/kishorhange111/llm-inference-optimization"><strong>llm-inference-optimization</strong></a><br/>
+      <sub>Single-GPU &amp; serving stack: int8/NF4/AWQ quantization, KV-cache paging, continuous batching, radix prefix cache, speculative decoding, vLLM TTFT/TPOT sweeps &amp; OpenAI router.</sub><br/><br/>
+      <code>vLLM</code> <code>PyTorch</code> <code>Quantization</code> <code>FastAPI</code><br/>
+      <strong>55 tests passing</strong> · Concurrency &amp; latency benchmark suite
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="https://img.shields.io/badge/DISTRIBUTED_TRAINING-2B7A87?style=flat-square" alt="Distributed Training" /><br/>
+      <a href="https://github.com/kishorhange111/distributed-llm-training"><strong>distributed-llm-training</strong></a><br/>
+      <sub>Plain-PyTorch GPT-2 pre-training &amp; alignment: DDP, FSDP2, DeepSpeed ZeRO-2/3 configs, bf16, <code>torch.compile</code>, LoRA/SFT/DPO/GRPO, atomic sharded checkpoints &amp; K8s PyTorchJob.</sub><br/><br/>
+      <code>PyTorch</code> <code>DDP</code> <code>FSDP2</code> <code>MLflow</code><br/>
+      <strong>57 tests passing</strong> · <strong>52% MFU</strong> pre-training on A100
+    </td>
+    <td width="50%" valign="top">
+      <img src="https://img.shields.io/badge/MCP_%C2%B7_SQL_SECURITY-D97757?style=flat-square" alt="MCP SQL Security" /><br/>
+      <a href="https://github.com/kishorhange111/mcp-sql-agent"><strong>mcp-sql-agent</strong></a><br/>
+      <sub>LangGraph text-to-SQL agent behind an MCP server with layered <code>sqlglot</code> AST validation, SQLite authorizer, multi-tenant RLS, column masking &amp; tamper-evident audit logs.</sub><br/><br/>
+      <code>MCP</code> <code>LangGraph</code> <code>sqlglot</code> <code>RLS</code><br/>
+      <strong>89 tests passing</strong> · <strong>89/89</strong> attacks blocked, <strong>0</strong> leaks
+    </td>
+  </tr>
+</table>
 
 ---
 
