@@ -44,7 +44,7 @@
 
 ## Flagship Portfolio
 
-> Hiring manager or recruiter? See the [**Portfolio Competency Map (`PORTFOLIO_MAP.md`)**](./PORTFOLIO_MAP.md) for a 60-second role-based guide mapping **FDE**, **AI Engineer**, **ML Systems**, and **MLOps** competencies directly to repos and verified results.
+> Hiring manager or recruiter? See the [**Portfolio Competency Map (`PORTFOLIO_MAP.md`)**](./PORTFOLIO_MAP.md) for a 60-second role-based guide mapping **FDE**, **AI Engineer**, **ML Systems**, **Research**, and **MLOps** competencies directly to repos and verified results.
 
 ### 1. Enterprise FDE & Agentic Systems
 
@@ -119,7 +119,7 @@
 - **GenAI & Agents:** LangChain · LangGraph · CrewAI · MCP · Hugging Face Transformers · PEFT (LoRA/QLoRA) · TRL (SFT/DPO/GRPO) · FAISS · Chroma · Ragas · DeepEval
 - **ML & Optimization:** PyTorch (DDP/FSDP2) · TensorFlow/Keras · scikit-learn · LightGBM · XGBoost · vLLM · ONNX Runtime · Hugging Face Optimum · TFLite · Apache TVM
 - **MLOps, Observability & Data:** FastAPI · Docker · Kubernetes · Helm · Terraform · AWS (ECS/ECR/ALB) · GitHub Actions · MLflow · Airflow · OpenTelemetry · Prometheus · Grafana · Spark · Kafka · Snowflake
-- **Cloud & Languages:** Python · SQL · Java · C++ · Go · GCP (Vertex AI) · AWS (Bedrock, SageMaker, S3)
+- **Cloud & Languages:** Python · TypeScript · SQL · Java · C++ · Go · GCP (Vertex AI) · AWS (Bedrock, SageMaker, S3)
 
 ---
 
