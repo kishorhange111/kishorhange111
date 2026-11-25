@@ -133,16 +133,18 @@
 </details>
 
 <details>
-<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (6 repos)</strong></summary>
+<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (8 repos)</strong></summary>
 
 | Repository | Highlights |
 |---|---|
-| [**triton-kernels-from-scratch**](https://github.com/kishorhange111/triton-kernels-from-scratch) | FlashAttention-2 forward + two-kernel backward, fused softmax & RMSNorm in **Triton** — values and gradients verified vs PyTorch (CI runs the real kernels in Triton's interpreter); on a T4 the fused RMSNorm hits **~230 GB/s (9× eager)** and a PTX diagnosis shows why attention lags (no `mma` emitted on sm75) |
+| [**triton-kernels-from-scratch**](https://github.com/kishorhange111/triton-kernels-from-scratch) | FlashAttention-2 forward + two-kernel backward, fused softmax & RMSNorm in **Triton** — values and gradients verified vs PyTorch (CI runs the real kernels in Triton's interpreter); on a T4 the fused RMSNorm hits **~230 GB/s (9× eager)** and a PTX diagnosis shows why attention lags (no `mma` emitted on sm75); plus a vLLM-style **paged-attention decode** kernel with flash-decoding split-K |
 | [**moe-from-scratch**](https://github.com/kishorhange111/moe-from-scratch) | Mixture-of-Experts: top-k & expert-choice routing, capacity/token dropping (GShard priority), Switch balance + z-loss, shared experts, batched `(E, C, d)` experts — dense vs MoE at equal active params |
 | [**sparse-autoencoders-interp**](https://github.com/kishorhange111/sparse-autoencoders-interp) | TopK / BatchTopK / L1 sparse autoencoders with AuxK — on a superposition toy model TopK recovers **100%** of ground-truth features while L1 recovers ~0% despite lower FVU; CE-loss-recovered splicing on GPT-2 |
 | [**ssm-from-scratch**](https://github.com/kishorhange111/ssm-from-scratch) | Mamba-2 from scratch: sequential, parallel-scan and chunked **SSD** algorithms (verified identical, incl. the attention duality), O(1) recurrent decoding — vs attention on associative recall, LM and decode cost |
-| [**long-context-rope-scaling**](https://github.com/kishorhange111/long-context-rope-scaling) | RoPE context extension from scratch — Position Interpolation, NTK-aware, dynamic NTK and **YaRN** (ramp + attention temperature), each pinned by a property test; length extrapolation and passkey retrieval to 16× the trained length, zero-shot and after a short fine-tune |
+| [**long-context-rope-scaling**](https://github.com/kishorhange111/long-context-rope-scaling) | RoPE context extension from scratch — Position Interpolation, NTK-aware, dynamic NTK and **YaRN**, each pinned by a property test. Measured on a T4: zero-shot at 16× length YaRN holds **1.97 bits/byte vs 4.89** for plain RoPE; fine-tuning finds scaled RoPE loses short-range passkey retrieval |
 | [**optimizers-from-scratch**](https://github.com/kishorhange111/optimizers-from-scratch) | AdamW, Lion, Adafactor and **Muon** (Newton–Schulz orthogonalisation) from their papers — verified against defining properties, then compared on a GPT for lr sensitivity, loss, optimizer-state memory and step time |
+| [**kv-cache-compression**](https://github.com/kishorhange111/kv-cache-compression) | KV-cache eviction (sliding window, StreamingLLM sinks, **H2O**, TOVA) and **KIVI**-style 2/4/8-bit KV on a hand-written GPT-2 decode loop — window/sink decoding proven equal to banded attention masks; perplexity vs an 832-token long-range copy task |
+| [**llm-quantization-from-scratch**](https://github.com/kishorhange111/llm-quantization-from-scratch) | **GPTQ** (Cholesky H⁻¹, lazy batch updates, act-order), **AWQ** and **SmoothQuant** W8A8 from their papers on GPT-2, with sequential block calibration — tests prove GPTQ ≡ RTN when H ∝ I and beats it on correlated inputs |
 
 </details>
 
