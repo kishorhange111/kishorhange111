@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=4">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=4">
-  <img alt="Kishor Hange — AI / ML & Forward Deployed Engineer at E2open, Bengaluru. Enterprise MCP agents, production RAG, LLM evals, inference optimization, and distributed training." src="./assets/header-light.svg?v=4" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=5">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=5">
+  <img alt="Kishor Hange — Forward Deployed, ML & AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise MCP agents, production RAG, LLM evals, inference optimization, and distributed training." src="./assets/header-light.svg?v=5" width="100%">
 </picture>
 
 <p align="center">

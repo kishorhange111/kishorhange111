@@ -173,12 +173,13 @@ def header(p):
   <text x="912" y="268" text-anchor="end" font-family="{MONO}" font-size="11" fill="{p["muted"]}" opacity="0.85">retrieve(q, k=5)</text>
 
   <!-- type -->
-  <text x="48" y="112" font-family="{SANS}" font-size="70" font-weight="600" letter-spacing="-1.5" fill="{p["name"]}">Kishor Hange{intro(0.15, 0.9, 8)}</text>
-  <text x="48" y="150" font-family="{SANS}" font-size="22" fill="{p["muted"]}">AI / ML &amp; Forward Deployed Engineer · E2open · Bengaluru{intro(0.3, 0.9, 8)}</text>
-  <rect x="48" y="170" width="40" height="2.5" rx="1.25" fill="{p["accent"]}" opacity="0.9">{intro(0.45, 0.6, 0)}</rect>
-  <g class="topics" font-family="{MONO}" font-size="13.5" letter-spacing="1.0" fill="{p["muted"]}">
-    <text x="48" y="204">MCP AGENTS · PRODUCTION RAG · LLM EVALS{intro(0.65, 0.6, 0)}</text>
-    <text x="48" y="228">INFERENCE OPT · DISTRIBUTED TRAINING · MLOPS{intro(0.75, 0.6, 0)}</text>
+  <text x="48" y="106" font-family="{SANS}" font-size="68" font-weight="600" letter-spacing="-1.5" fill="{p["name"]}">Kishor Hange{intro(0.15, 0.9, 8)}</text>
+  <text x="48" y="144" font-family="{SANS}" font-size="21" font-weight="500" fill="{p["muted"]}">Forward Deployed · ML &amp; AI Engineer{intro(0.3, 0.9, 8)}</text>
+  <text x="48" y="170" font-family="{SANS}" font-size="15.5" fill="{p["muted"]}" opacity="0.88">E2open · Bengaluru · ~4 YOE{intro(0.4, 0.8, 4)}</text>
+  <rect x="48" y="188" width="44" height="2.5" rx="1.25" fill="{p["accent"]}" opacity="0.95">{intro(0.5, 0.6, 0)}</rect>
+  <g class="topics" font-family="{MONO}" font-size="13" letter-spacing="0.9" fill="{p["muted"]}">
+    <text x="48" y="218">MCP AGENTS · PRODUCTION RAG · LLM EVALS{intro(0.65, 0.6, 0)}</text>
+    <text x="48" y="240">INFERENCE OPT · DISTRIBUTED TRAINING · MLOPS{intro(0.75, 0.6, 0)}</text>
   </g>
 </svg>
 """
