@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=5">
-  <img alt="Kishor Hange — Forward Deployed, ML & AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise MCP agents, production RAG, LLM evals, inference optimization, and distributed training." src="./assets/header-light.svg?v=5" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=6">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=6">
+  <img alt="Kishor Hange — Forward Deployed, ML & AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise MCP agents, production RAG, LLM evals, inference optimization, and distributed training." src="./assets/header-light.svg?v=6" width="100%">
 </picture>
 
 <p align="center">
@@ -154,7 +154,7 @@
 <p align="center"><sub>B.Tech in Computer Science &amp; Engineering · DKTE Society's Textile and Engineering Institute, Ichalkaranji (2019–2023) · CGPA 8.31</sub></p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg?v=3">
-  <img alt="Thanks for visiting. Kishor Hange, Bengaluru, IN — FDE, ML & AI Systems" src="./assets/footer-light.svg?v=3" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg?v=4">
+  <img alt="Thanks for visiting. Kishor Hange, Bengaluru, IN — FDE, ML & AI Systems" src="./assets/footer-light.svg?v=4" width="100%">
 </picture>
