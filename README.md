@@ -133,7 +133,7 @@
 </details>
 
 <details>
-<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (14 repos)</strong></summary>
+<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (16 repos)</strong></summary>
 
 | Repository | Highlights |
 |---|---|
@@ -151,6 +151,8 @@
 | [**attention-variants-mla**](https://github.com/kishorhange111/attention-variants-mla) | MHA / GQA / MQA and DeepSeek-V2 **Multi-head Latent Attention** with decoupled RoPE — the **absorbed-matrix decode path** (no per-head K/V ever materialised) is verified equal to the naive forward to 1e-10; KV-cache bytes per token vs bits/byte at equal training budget |
 | [**speculative-decoding**](https://github.com/kishorhange111/speculative-decoding) | Speculative decoding on a hand-written GPT-2 with a roll-back KV cache — exact accept/reject rule (Monte Carlo test that output matches the target distribution, with a power control), prompt-lookup drafting, gpt2→gpt2-xl acceptance and wall-clock speed-up on a T4 |
 | [**grpo-from-scratch**](https://github.com/kishorhange111/grpo-from-scratch) | **GRPO vs Dr. GRPO** on Qwen2.5-0.5B-Instruct through hand-written LoRA (adapters-off = KL reference, no second model copy) — RL with verifiable arithmetic rewards, resumable across 40-minute GPU sessions; tests pin the REINFORCE limit, clipping, k3 unbiasedness and each aggregation's length bias |
+| [**sequence-parallel-attention**](https://github.com/kishorhange111/sequence-parallel-attention) | Context parallelism — **ring attention with a hand-written backward** (dK/dV travel with their shard), **zigzag** causal load balancing (1.82× shorter critical path at P = 8) and **DeepSpeed-Ulysses** all-to-all; forward and all gradients exact to 1e-10 on a 4-process group |
+| [**model-parallelism-from-scratch**](https://github.com/kishorhange111/model-parallelism-from-scratch) | **Megatron tensor parallelism** (f/g conjugate ops, column/row-parallel, head-sharded attention, vocab-parallel cross-entropy), **sequence parallelism**, and **GPipe vs 1F1B** pipelines with a bubble simulator — every gradient shard matches single-device training to 1e-10 |
 
 </details>
 
