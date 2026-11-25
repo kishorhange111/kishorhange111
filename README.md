@@ -121,7 +121,7 @@
 
 | Repository | Highlights |
 |---|---|
-| [**llm-capacity-planner**](https://github.com/kishorhange111/llm-capacity-planner) | Roofline cost model (FLOPs, HBM, KV cache, TP all-reduce) + continuous-batching simulator + SLO planner — kv8 doubles decode throughput, GQA gives **4×** concurrency |
+| [**llm-capacity-planner**](https://github.com/kishorhange111/llm-capacity-planner) | Roofline cost model + continuous-batching simulator + SLO planner, **calibrated against real vLLM on a T4**: replaying the closed-loop schedule and separating attention efficiency cut model error **76% → 12%**, and showed T4 attention (TRITON_ATTN) runs at ~1% of peak vs 27% for GEMMs |
 | [**mini-chatgpt**](https://github.com/kishorhange111/mini-chatgpt) | Base LLM (`Qwen2.5-0.5B`) → 160k SFT (127M tokens) → from-scratch DPO (12k pairs) — matches Qwen Instruct on IFEval (**36.7 vs 36.3**) and beats it on ARC-Easy (**+5 pts**) in ~3 GPU-hours |
 | [**generative-ai-engineering**](https://github.com/kishorhange111/generative-ai-engineering) | 8 benchmarked LLM systems: QLoRA text-to-SQL (**60.0% → 66.2%**), 7B→0.5B distillation, function-calling (**16.7% → 94.8%**), GRPO, Qwen2-VL, Whisper Marathi (CER **53.6% → 14.7%**), guardrails |
 | [**rl-from-scratch**](https://github.com/kishorhange111/rl-from-scratch) | Double/Dueling DQN, PPO (GAE, clipping, vectorized envs) & REINFORCE in PyTorch — 45-run 5-seed IQM benchmark (PPO **5/5** CartPole, Double DQN **5/5** Acrobot) |
@@ -129,6 +129,18 @@
 | [**arithmetic-transformer-interp**](https://github.com/kishorhange111/arithmetic-transformer-interp) | Activation patching & TopK SAEs (**99.97%** CE recovered) on addition transformers — shows **probe-decodable ≠ causally used** (88.5% probe acc vs 2% patching effect) |
 | [**grokking-progress-measures**](https://github.com/kishorhange111/grokking-progress-measures) | Modular-addition grokking with Fourier-sparsity progress measures — sparsity rises **0.32 → 0.61** while test accuracy is still near chance |
 | [**scaling-laws-from-scratch**](https://github.com/kishorhange111/scaling-laws-from-scratch) | Chinchilla-style IsoFLOP sweeps & parametric L(N, D) fits on byte-level GPTs — demonstrates batch-size step-starvation vs interior compute optimum |
+
+</details>
+
+<details>
+<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (4 repos)</strong></summary>
+
+| Repository | Highlights |
+|---|---|
+| [**triton-kernels-from-scratch**](https://github.com/kishorhange111/triton-kernels-from-scratch) | FlashAttention-2 forward + two-kernel backward, fused softmax & RMSNorm in **Triton** — values and gradients verified vs PyTorch (CI runs the real kernels in Triton's interpreter), benchmarked on GPU |
+| [**moe-from-scratch**](https://github.com/kishorhange111/moe-from-scratch) | Mixture-of-Experts: top-k & expert-choice routing, capacity/token dropping (GShard priority), Switch balance + z-loss, shared experts, batched `(E, C, d)` experts — dense vs MoE at equal active params |
+| [**sparse-autoencoders-interp**](https://github.com/kishorhange111/sparse-autoencoders-interp) | TopK / BatchTopK / L1 sparse autoencoders with AuxK — ground-truth feature recovery on a superposition toy model and CE-loss-recovered splicing on GPT-2 |
+| [**ssm-from-scratch**](https://github.com/kishorhange111/ssm-from-scratch) | Mamba-2 from scratch: sequential, parallel-scan and chunked **SSD** algorithms (verified identical, incl. the attention duality), O(1) recurrent decoding — vs attention on associative recall, LM and decode cost |
 
 </details>
 
