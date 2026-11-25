@@ -371,10 +371,40 @@ def footer(p):
 """
 
 
+# ------------------------------------------------------------------ kpi strip
+def kpi(p):
+    W, H = 960, 112
+    cards = [
+        ("−38%", "Inference Latency", "ONNX Runtime &amp; Optimum · E2open", p["accent"]),
+        ("+9.5%", "Classifier Accuracy", "Custom Word2Vec + RF &amp; BERT · E2open", p["teal"]),
+        ("588+ Tests · 100+ PRs", "Verified Engineering", "9 Production Repos + CPython PR", p["accent"]),
+    ]
+    cw, ch, gap = 308, 108, 16
+    xs = [2, 2 + cw + gap, 2 + 2 * (cw + gap)]
+    blocks = []
+    for x, (metric, label, sub, color) in zip(xs, cards):
+        cx = x + cw / 2
+        fs = "22" if len(metric) > 10 else "27"
+        blocks.append(
+            f'  <g>\n'
+            f'    <rect x="{x}" y="2" width="{cw}" height="{ch}" rx="14" fill="{p["card_bg"]}" fill-opacity="{p["card_op"]}" stroke="{p["border"]}" stroke-width="1"/>\n'
+            f'    <rect x="{cx - 16:.0f}" y="14" width="32" height="2.5" rx="1.25" fill="{color}" opacity="0.9"/>\n'
+            f'    <text x="{cx:.0f}" y="52" text-anchor="middle" font-family="{SANS}" font-size="{fs}" font-weight="600" letter-spacing="-0.6" fill="{color}">{metric}</text>\n'
+            f'    <text x="{cx:.0f}" y="76" text-anchor="middle" font-family="{SANS}" font-size="13.5" font-weight="500" fill="{p["name"]}">{label}</text>\n'
+            f'    <text x="{cx:.0f}" y="95" text-anchor="middle" font-family="{MONO}" font-size="10.5" fill="{p["muted"]}">{sub}</text>\n'
+            f'  </g>'
+        )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">
+  <title id="t">Key Impact Metrics: -38% Inference Latency at E2open, +9.5% Classifier Accuracy at E2open, 588+ Tests and 100+ PRs across 9 production repos plus a merged CPython PR.</title>
+{chr(10).join(blocks)}
+</svg>
+"""
+
+
 if __name__ == "__main__":
     ASSETS.mkdir(exist_ok=True)
     for mode, pal in PALETTES.items():
-        for name, build in (("header", header), ("footer", footer)):
+        for name, build in (("header", header), ("kpi", kpi), ("footer", footer)):
             out = ASSETS / f"{name}-{mode}.svg"
             out.write_text(build(pal), encoding="utf-8", newline="\n")
             print(f"{out.name}: {out.stat().st_size / 1024:.1f} KB")
