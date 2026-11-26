@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 274" role="img" aria-labelledby="t">
+  <title id="t">Core Engineering Stack — 4-Layer Architecture Blueprint covering Agents/RAG/Evals, Models/Training/Inference, Serving/Infra/Observability, and Languages/Data/Cloud.</title>
+  <style>
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <defs>
+    <clipPath id="stackClip">
+      <rect x="1" y="1" width="958" height="272" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="958" height="272" rx="16" fill="#FAFAF9" fill-opacity="0.97"/>
+
+  <g clip-path="url(#stackClip)">
+    <text x="24" y="29" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.2" font-weight="600" letter-spacing="1.4" fill="#57534E">CORE ENGINEERING STACK · 4-LAYER BLUEPRINT</text>
+    <text x="936" y="29" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" fill="#78716C">application → models → runtime → infrastructure</text>
+
+    <!-- vertical architectural bus spine -->
+    <line x1="34" y1="69" x2="34" y2="237" stroke="#D6D3D1" stroke-width="1.4"/>
+
+    <!-- 4 architectural stack layers -->
+    <g>
+      <line x1="34" y1="69" x2="54" y2="69" stroke="#D6D3D1" stroke-width="1.2"/>
+      <circle cx="34" cy="69" r="4.2" fill="#FAFAF9" stroke="#B4532F" stroke-width="1.5"/>
+      <rect x="54" y="46" width="882" height="46" rx="10" fill="#FFFFFF" stroke="#D6D3D1" stroke-width="1"/>
+      <rect x="54" y="46" width="882" height="46" rx="10" fill="none" stroke="#B4532F" stroke-width="1.35" opacity="0.14">
+        <animate attributeName="opacity" values="0.14;0.14;0.82;0.14;0.14" keyTimes="0;0.000;0.062;0.179;1" dur="5.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="54" y="46" width="3.5" height="46" rx="1.75" fill="#B4532F" opacity="0.88"/>
+      <text x="72" y="64" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="600" letter-spacing="1.2" fill="#B4532F">01 · AGENTS, RAG &amp; EVALS</text>
+      <text x="72" y="81" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#1C1917" opacity="0.92">MCP · LangGraph · LangChain · CrewAI · FAISS · Chroma · OpenSearch · Ragas · DeepEval · sqlglot · xgrammar</text>
+    </g>
+    <g>
+      <line x1="34" y1="125" x2="54" y2="125" stroke="#D6D3D1" stroke-width="1.2"/>
+      <circle cx="34" cy="125" r="4.2" fill="#FAFAF9" stroke="#0F766E" stroke-width="1.5"/>
+      <rect x="54" y="102" width="882" height="46" rx="10" fill="#FFFFFF" stroke="#D6D3D1" stroke-width="1"/>
+      <rect x="54" y="102" width="882" height="46" rx="10" fill="none" stroke="#0F766E" stroke-width="1.35" opacity="0.14">
+        <animate attributeName="opacity" values="0.14;0.14;0.82;0.14;0.14" keyTimes="0;0.205;0.268;0.384;1" dur="5.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="54" y="102" width="3.5" height="46" rx="1.75" fill="#0F766E" opacity="0.88"/>
+      <text x="72" y="120" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="600" letter-spacing="1.2" fill="#0F766E">02 · MODELS, TRAINING &amp; INFERENCE</text>
+      <text x="72" y="137" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#1C1917" opacity="0.92">PyTorch (DDP, FSDP2) · Transformers · PEFT (LoRA/QLoRA) · TRL (SFT/DPO/GRPO) · vLLM · ONNX Runtime · Optimum · TVM</text>
+    </g>
+    <g>
+      <line x1="34" y1="181" x2="54" y2="181" stroke="#D6D3D1" stroke-width="1.2"/>
+      <circle cx="34" cy="181" r="4.2" fill="#FAFAF9" stroke="#059669" stroke-width="1.5"/>
+      <rect x="54" y="158" width="882" height="46" rx="10" fill="#FFFFFF" stroke="#D6D3D1" stroke-width="1"/>
+      <rect x="54" y="158" width="882" height="46" rx="10" fill="none" stroke="#059669" stroke-width="1.35" opacity="0.14">
+        <animate attributeName="opacity" values="0.14;0.14;0.82;0.14;0.14" keyTimes="0;0.411;0.473;0.589;1" dur="5.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="54" y="158" width="3.5" height="46" rx="1.75" fill="#059669" opacity="0.88"/>
+      <text x="72" y="176" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="600" letter-spacing="1.2" fill="#059669">03 · SERVING, INFRA &amp; OBSERVABILITY</text>
+      <text x="72" y="193" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#1C1917" opacity="0.92">FastAPI · Docker · Kubernetes · Helm · Terraform · GitHub Actions · MLflow · Airflow · OpenTelemetry · Prometheus · Grafana</text>
+    </g>
+    <g>
+      <line x1="34" y1="237" x2="54" y2="237" stroke="#D6D3D1" stroke-width="1.2"/>
+      <circle cx="34" cy="237" r="4.2" fill="#FAFAF9" stroke="#0F766E" stroke-width="1.5"/>
+      <rect x="54" y="214" width="882" height="46" rx="10" fill="#FFFFFF" stroke="#D6D3D1" stroke-width="1"/>
+      <rect x="54" y="214" width="882" height="46" rx="10" fill="none" stroke="#0F766E" stroke-width="1.35" opacity="0.14">
+        <animate attributeName="opacity" values="0.14;0.14;0.82;0.14;0.14" keyTimes="0;0.616;0.679;0.795;1" dur="5.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="54" y="214" width="3.5" height="46" rx="1.75" fill="#0F766E" opacity="0.88"/>
+      <text x="72" y="232" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="600" letter-spacing="1.2" fill="#0F766E">04 · LANGUAGES, DATA &amp; CLOUD</text>
+      <text x="72" y="249" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#1C1917" opacity="0.92">Python · TypeScript · SQL · Java · C++ · Go · Spark · Kafka · Snowflake · AWS (Bedrock, ECS, SageMaker, S3) · GCP (Vertex AI)</text>
+    </g>
+
+    <!-- vertical signal pulse gliding through all 4 layers -->
+    <g opacity="0.95">
+      <circle r="6" fill="#0F766E" opacity="0.25"/>
+      <circle r="2.6" fill="#0F766E"/>
+      <animateMotion dur="5.6s" repeatCount="indefinite" path="M 34,69 L 34,237"/>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="958" height="272" rx="16" fill="none" stroke="#D6D3D1" stroke-width="1"/>
+</svg>

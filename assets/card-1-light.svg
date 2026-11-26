@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 176" role="img" aria-labelledby="t">
+  <title id="t">enterprise-mcp-agent-platform — FDE · MCP PLATFORM: RBAC/RLS · HITL · Red-Team Suite</title>
+  <style>
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <defs>
+    <clipPath id="cClip1">
+      <rect x="1" y="1" width="408" height="174" rx="14"/>
+    </clipPath>
+    <radialGradient id="cGlow1">
+      <stop offset="0" stop-color="#B4532F" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#B4532F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="1" y="1" width="408" height="174" rx="14" fill="#FAFAF9" fill-opacity="0.97"/>
+
+  <g clip-path="url(#cClip1)">
+    <!-- top accent stripe -->
+    <rect x="0" y="0" width="410" height="3" fill="#B4532F" opacity="0.88"/>
+    <!-- subtle breathing corner glow -->
+    <circle cx="386" cy="24" r="76" fill="url(#cGlow1)" opacity="0.38">
+      <animate attributeName="opacity" values="0.22;0.58;0.22" dur="7.5s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+    </circle>
+
+    <!-- kicker + micro icon -->
+    <circle cx="24" cy="24" r="2.6" fill="#B4532F">
+      <animate attributeName="opacity" values="0.45;1;0.45" dur="3.6s" begin="0.0s" repeatCount="indefinite"/>
+    </circle>
+    <text x="34" y="27.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="600" letter-spacing="1.2" fill="#B4532F">FDE · MCP PLATFORM</text>
+    <g stroke="#B4532F" stroke-width="1.35" fill="none" opacity="0.88">
+      <rect x="374" y="16" width="6" height="6" rx="1.5"/>
+      <rect x="383" y="16" width="6" height="6" rx="1.5"/>
+      <rect x="374" y="25" width="6" height="6" rx="1.5"/>
+      <rect x="383" y="25" width="6" height="6" rx="1.5"/>
+    </g>
+
+    <!-- repo title & 2-line architecture summary -->
+    <text x="20" y="53" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="-0.3" fill="#1C1917">enterprise-mcp-agent-platform</text>
+    <text x="20" y="75" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.6" fill="#57534E">Multi-tenant RBAC/RLS, PII &amp; injection guardrails,</text>
+    <text x="20" y="92" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.6" fill="#57534E">SQL/REST/doc connectors, DAG runtime, HITL &amp; K8s.</text>
+
+    <!-- tech pills -->
+    <rect x="20" y="106" width="36" height="20" rx="6" fill="#F5F5F4" stroke="#E7E5E4" stroke-width="0.9"/>
+    <text x="38.0" y="119.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.3" fill="#57534E">MCP</text>
+    <rect x="63" y="106" width="59" height="20" rx="6" fill="#F5F5F4" stroke="#E7E5E4" stroke-width="0.9"/>
+    <text x="92.5" y="119.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.3" fill="#57534E">FastAPI</text>
+    <rect x="129" y="106" width="40" height="20" rx="6" fill="#F5F5F4" stroke="#E7E5E4" stroke-width="0.9"/>
+    <text x="149.0" y="119.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.3" fill="#57534E">OTel</text>
+    <rect x="176" y="106" width="78" height="20" rx="6" fill="#F5F5F4" stroke="#E7E5E4" stroke-width="0.9"/>
+    <text x="215.0" y="119.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.3" fill="#57534E">Helm / K8s</text>
+
+    <!-- highlighted bottom metric pill -->
+    <rect x="20" y="138" width="370" height="24" rx="7" fill="#B4532F" fill-opacity="0.11" stroke="#B4532F" stroke-opacity="0.32" stroke-width="0.9"/>
+    <text x="32" y="153.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.2" font-weight="600" fill="#1C1917">RBAC/RLS · HITL · Red-Team Suite</text>
+    <text x="380" y="153.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#B4532F">↗</text>
+  </g>
+
+  <rect x="1" y="1" width="408" height="174" rx="14" fill="none" stroke="#D6D3D1" stroke-width="1"/>
+</svg>
