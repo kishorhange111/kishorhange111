@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 176" role="img" aria-labelledby="t">
+  <title id="t">llm-inference-optimization — INFERENCE OPTIMIZATION: TTFT/TPOT · OpenAI Router · K8s HPA</title>
+  <style>
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <defs>
+    <clipPath id="cClip4">
+      <rect x="1" y="1" width="408" height="174" rx="14"/>
+    </clipPath>
+    <radialGradient id="cGlow4">
+      <stop offset="0" stop-color="#B4532F" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#B4532F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="1" y="1" width="408" height="174" rx="14" fill="#FAFAF9" fill-opacity="0.97"/>
+
+  <g clip-path="url(#cClip4)">
+    <!-- top accent stripe -->
+    <rect x="0" y="0" width="410" height="3" fill="#B4532F" opacity="0.88"/>
+    <!-- subtle breathing corner glow -->
+    <circle cx="386" cy="24" r="76" fill="url(#cGlow4)" opacity="0.38">
+      <animate attributeName="opacity" values="0.22;0.58;0.22" dur="7.5s" begin="2.7s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+    </circle>
+
+    <!-- kicker + micro icon -->
+    <circle cx="24" cy="24" r="2.6" fill="#B4532F">
+      <animate attributeName="opacity" values="0.45;1;0.45" dur="3.6s" begin="2.7s" repeatCount="indefinite"/>
+    </circle>
+    <text x="34" y="27.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="600" letter-spacing="1.2" fill="#B4532F">INFERENCE OPTIMIZATION</text>
+    <path d="M 383,17 L 377,25 L 382,25 L 380.5,31 L 387,23 L 382,23 Z" fill="none" stroke="#B4532F" stroke-width="1.3" stroke-linejoin="round" opacity="0.88"/>
+
+    <!-- repo title & 2-line architecture summary -->
+    <text x="20" y="53" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="-0.3" fill="#1C1917">llm-inference-optimization</text>
+    <text x="20" y="75" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.6" fill="#57534E">INT8/NF4/AWQ quantization, PagedAttention KV,</text>
+    <text x="20" y="92" font-family="Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.6" fill="#57534E">continuous batching, prefix cache &amp; speculative.</text>
+
+    <!-- tech pills -->
+    <rect x="20" y="106" width="40" height="20" rx="6" fill="#F5F5F4" stroke="#E7E5E4" stroke-width="0.9"/>
+    <text x="40.0" y="119.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.3" fill="#57534E">vLLM</text>
+    <rect x="67" y="106" width="59" height="20" rx="6" fill="#F5F5F4" stroke="#E7E5E4" stroke-width="0.9"/>
+    <text x="96.5" y="119.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.3" fill="#57534E">PyTorch</text>
+    <rect x="133" y="106" width="90" height="20" rx="6" fill="#F5F5F4" stroke="#E7E5E4" stroke-width="0.9"/>
+    <text x="178.0" y="119.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.3" fill="#57534E">Quantization</text>
+    <rect x="230" y="106" width="59" height="20" rx="6" fill="#F5F5F4" stroke="#E7E5E4" stroke-width="0.9"/>
+    <text x="259.5" y="119.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.3" fill="#57534E">FastAPI</text>
+
+    <!-- highlighted bottom metric pill -->
+    <rect x="20" y="138" width="370" height="24" rx="7" fill="#B4532F" fill-opacity="0.11" stroke="#B4532F" stroke-opacity="0.32" stroke-width="0.9"/>
+    <text x="32" y="153.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.2" font-weight="600" fill="#1C1917">TTFT/TPOT · OpenAI Router · K8s HPA</text>
+    <text x="380" y="153.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#B4532F">↗</text>
+  </g>
+
+  <rect x="1" y="1" width="408" height="174" rx="14" fill="none" stroke="#D6D3D1" stroke-width="1"/>
+</svg>
