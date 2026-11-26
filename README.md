@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=8">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=8">
-  <img alt="Kishor Hange — Forward Deployed, ML & AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise Agents (MCP), Hybrid RAG, LLM Evals, Inference and Distributed Training." src="./assets/header-light.svg?v=8" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=9">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=9">
+  <img alt="Kishor Hange — Forward Deployed, ML & AI Engineer at E2open, Bengaluru (~4 YOE). Live AI Systems Topology and Production Telemetry." src="./assets/header-light.svg?v=9" width="100%">
 </picture>
 
 <p align="center">
@@ -32,56 +32,15 @@
 
 > Hiring manager or recruiter? Open the [**Portfolio Competency Map**](./PORTFOLIO_MAP.md) for a 60-second role-based guide across **FDE**, **AI Engineer**, **ML Systems**, **Research**, and **MLOps**.
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <sub>FDE · MCP PLATFORM</sub><br/>
-      <a href="https://github.com/kishorhange111/enterprise-mcp-agent-platform"><strong>enterprise-mcp-agent-platform</strong></a><br/>
-      <sub>Multi-tenant MCP platform with RBAC/RLS policy enforcement, PII &amp; injection guardrails, SQL/REST/doc connectors, HITL approvals, and audit logging.</sub><br/><br/>
-      <sub>MCP · FastAPI · OpenTelemetry · Helm / K8s</sub><br/>
-      <strong>RBAC/RLS · HITL approvals · Red-team security suite</strong>
-    </td>
-    <td width="50%" valign="top">
-      <sub>PRODUCTION HYBRID RAG</sub><br/>
-      <a href="https://github.com/kishorhange111/production-rag-service"><strong>production-rag-service</strong></a><br/>
-      <sub>FastAPI hybrid RAG with multi-format CDC ingestion, BM25 + dense RRF, calibrated reranking, fail-closed ACL filtering, and SSE streaming.</sub><br/><br/>
-      <sub>FastAPI · BM25 + FAISS · Reranker · Prometheus</sub><br/>
-      <strong>1.00 faithfulness &amp; recall@3 golden eval gate</strong>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <sub>LLM EVALUATION</sub><br/>
-      <a href="https://github.com/kishorhange111/llm-evaluation-harness"><strong>llm-evaluation-harness</strong></a><br/>
-      <sub>Reproducible benchmark harness covering MMLU, ARC, HellaSwag, GSM8K, and sandboxed HumanEval with position-bias-controlled LLM judging.</sub><br/><br/>
-      <sub>PyTorch · Bootstrap CIs · Paired Tests · Sandboxed Exec</sub><br/>
-      <strong>Matches EleutherAI lm-eval within 0.5 pts</strong>
-    </td>
-    <td width="50%" valign="top">
-      <sub>INFERENCE OPTIMIZATION</sub><br/>
-      <a href="https://github.com/kishorhange111/llm-inference-optimization"><strong>llm-inference-optimization</strong></a><br/>
-      <sub>Single-GPU &amp; serving stack: int8/NF4/AWQ quantization, KV-cache paging, continuous batching, radix prefix caching, and speculative decoding.</sub><br/><br/>
-      <sub>vLLM · PyTorch · Quantization · FastAPI</sub><br/>
-      <strong>vLLM TTFT/TPOT sweeps · OpenAI-compatible router</strong>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <sub>DISTRIBUTED TRAINING</sub><br/>
-      <a href="https://github.com/kishorhange111/distributed-llm-training"><strong>distributed-llm-training</strong></a><br/>
-      <sub>Plain-PyTorch GPT-2 pre-training and alignment stack supporting DDP, FSDP2, ZeRO-2/3 configs, bf16, LoRA/SFT/DPO/GRPO, and K8s PyTorchJob.</sub><br/><br/>
-      <sub>PyTorch · DDP · FSDP2 · MLflow</sub><br/>
-      <strong>52% MFU pre-training on A100 · Exact-resume shards</strong>
-    </td>
-    <td width="50%" valign="top">
-      <sub>MCP · SQL SECURITY</sub><br/>
-      <a href="https://github.com/kishorhange111/mcp-sql-agent"><strong>mcp-sql-agent</strong></a><br/>
-      <sub>LangGraph text-to-SQL agent behind an MCP server with layered sqlglot AST policy guards, SQLite authorizer, multi-tenant RLS, and audit logs.</sub><br/><br/>
-      <sub>MCP · LangGraph · sqlglot · Row-Level Security</sub><br/>
-      <strong>89/89 SQL attacks blocked · 0 protected leaks</strong>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/kishorhange111/enterprise-mcp-agent-platform"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-1-dark.svg?v=1"><source media="(prefers-color-scheme: light)" srcset="./assets/card-1-light.svg?v=1"><img alt="enterprise-mcp-agent-platform — FDE MCP Platform" src="./assets/card-1-light.svg?v=1" width="48.5%"></picture></a>&nbsp;&nbsp;<a href="https://github.com/kishorhange111/production-rag-service"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-2-dark.svg?v=1"><source media="(prefers-color-scheme: light)" srcset="./assets/card-2-light.svg?v=1"><img alt="production-rag-service — Production Hybrid RAG" src="./assets/card-2-light.svg?v=1" width="48.5%"></picture></a>
+</p>
+<p align="center">
+  <a href="https://github.com/kishorhange111/llm-evaluation-harness"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-3-dark.svg?v=1"><source media="(prefers-color-scheme: light)" srcset="./assets/card-3-light.svg?v=1"><img alt="llm-evaluation-harness — LLM Evaluation" src="./assets/card-3-light.svg?v=1" width="48.5%"></picture></a>&nbsp;&nbsp;<a href="https://github.com/kishorhange111/llm-inference-optimization"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-4-dark.svg?v=1"><source media="(prefers-color-scheme: light)" srcset="./assets/card-4-light.svg?v=1"><img alt="llm-inference-optimization — Inference Optimization" src="./assets/card-4-light.svg?v=1" width="48.5%"></picture></a>
+</p>
+<p align="center">
+  <a href="https://github.com/kishorhange111/distributed-llm-training"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-5-dark.svg?v=1"><source media="(prefers-color-scheme: light)" srcset="./assets/card-5-light.svg?v=1"><img alt="distributed-llm-training — Distributed Training" src="./assets/card-5-light.svg?v=1" width="48.5%"></picture></a>&nbsp;&nbsp;<a href="https://github.com/kishorhange111/mcp-sql-agent"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-6-dark.svg?v=1"><source media="(prefers-color-scheme: light)" srcset="./assets/card-6-light.svg?v=1"><img alt="mcp-sql-agent — MCP SQL Security" src="./assets/card-6-light.svg?v=1" width="48.5%"></picture></a>
+</p>
 
 ---
 
@@ -201,12 +160,11 @@
 
 ## Core Engineering Stack
 
-| Layer | Technologies |
-|---|---|
-| **Agents, RAG & Evals** | MCP · LangGraph · LangChain · CrewAI · FAISS · Chroma · OpenSearch · Ragas · DeepEval · sqlglot · xgrammar |
-| **Models, Training & Inference** | PyTorch (DDP, FSDP2) · Hugging Face Transformers · PEFT (LoRA, QLoRA) · TRL (SFT, DPO, GRPO) · vLLM · ONNX Runtime · Optimum · TFLite · Apache TVM · LightGBM · scikit-learn |
-| **Serving, Infra & Observability** | FastAPI · Docker · Kubernetes · Helm · Terraform · GitHub Actions · MLflow · Airflow · OpenTelemetry · Prometheus · Grafana |
-| **Languages, Data & Cloud** | Python · TypeScript · SQL · Java · C++ · Go · Spark · Kafka · Snowflake · AWS (Bedrock, ECS, SageMaker, S3) · GCP (Vertex AI) |
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg?v=1">
+  <img alt="Core Engineering Stack — 4-Layer Architecture Blueprint covering Agents/RAG/Evals, Models/Training/Inference, Serving/Infra/Observability, and Languages/Data/Cloud." src="./assets/stack-light.svg?v=1" width="100%">
+</picture>
 
 ---
 
