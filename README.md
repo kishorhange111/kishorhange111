@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=7">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=7">
-  <img alt="Kishor Hange — Forward Deployed, ML & AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise Agents (MCP), Hybrid RAG, LLM Evals, Inference and Distributed Training." src="./assets/header-light.svg?v=7" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg?v=8">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg?v=8">
+  <img alt="Kishor Hange — Forward Deployed, ML & AI Engineer at E2open, Bengaluru (~4 YOE). Enterprise Agents (MCP), Hybrid RAG, LLM Evals, Inference and Distributed Training." src="./assets/header-light.svg?v=8" width="100%">
 </picture>
 
 <p align="center">
@@ -12,12 +12,18 @@
   <a href="mailto:kishorhange46@gmail.com">Email</a>
 </p>
 
-**Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru, **~4 YOE**) taking LLM and ML systems from prototype to production — specializing in secure MCP agent platforms, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps. Outside production systems, I run controlled multi-seed deep learning experiments (RLVR/GRPO, mechanistic interpretability, grokking, scaling laws) and report null results as carefully as wins.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/kpi-dark.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/kpi-light.svg?v=3">
+  <img alt="Key Impact: -38% Inference Latency at E2open, +9.5% Classifier Accuracy at E2open, and CPython Open-Source Contributor (merged python/cpython#148978)." src="./assets/kpi-light.svg?v=3" width="100%">
+</picture>
+
+**Forward Deployed, ML & AI Engineer** at **E2open** (Bengaluru, **~4 YOE**) taking LLM and ML systems from prototype to production — specializing in secure MCP agent platforms, hybrid RAG with automated eval gates, low-latency inference, distributed training, and observable MLOps. Outside production systems, I run controlled multi-seed deep learning experiments (RLVR/GRPO, mechanistic interpretability, grokking, scaling laws, GPU kernels) and report null results as carefully as wins.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/kpi-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/kpi-light.svg?v=2">
-  <img alt="Key Impact: -38% Inference Latency at E2open, +9.5% Classifier Accuracy at E2open, and CPython Open-Source Contributor (merged python/cpython#148978)." src="./assets/kpi-light.svg?v=2" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/architecture-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/architecture-light.svg?v=1">
+  <img alt="End-to-End Production AI Architecture: Enterprise Data and MCP to RBAC and Guardrails to Hybrid RAG and Agents to vLLM/ONNX Serving to Evals and OpenTelemetry." src="./assets/architecture-light.svg?v=1" width="100%">
 </picture>
 
 ---
@@ -204,4 +210,8 @@
 
 ---
 
-<p align="center"><sub>B.Tech in Computer Science &amp; Engineering · DKTE Ichalkaranji (2019–2023) · CGPA 8.31 · Bengaluru, India</sub></p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg?v=5">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg?v=5">
+  <img alt="B.Tech CSE · DKTE Ichalkaranji (2019–2023) · CGPA 8.31 · Bengaluru, India" src="./assets/footer-light.svg?v=5" width="100%">
+</picture>
