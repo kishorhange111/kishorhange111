@@ -133,7 +133,7 @@
 </details>
 
 <details>
-<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (24 repos)</strong></summary>
+<summary><strong>GPU Kernels &amp; Model Architectures from Scratch (25 repos)</strong></summary>
 
 | Repository | Highlights |
 |---|---|
@@ -150,6 +150,7 @@
 | [**test-time-compute-scaling**](https://github.com/kishorhange111/test-time-compute-scaling) | Test-time compute on GSM8K with vLLM — unbiased pass@k oracle vs self-consistency, confidence-weighted voting and best-of-N, plus confidence calibration |
 | [**attention-variants-mla**](https://github.com/kishorhange111/attention-variants-mla) | MHA / GQA / MQA and DeepSeek-V2 **Multi-head Latent Attention** with decoupled RoPE — the **absorbed-matrix decode path** (no per-head K/V ever materialised) is verified equal to the naive forward to 1e-10. On a T4, **GQA-2 matches MHA at a third of the cache**, while a d_c sweep shows MLA needs a latent of about 192 to reach MQA's quality, an honest negative at 10M parameters |
 | [**speculative-decoding**](https://github.com/kishorhange111/speculative-decoding) | Speculative decoding on a hand-written GPT-2 with a roll-back KV cache — exact accept/reject rule (Monte Carlo test that output matches the target distribution, with a power control), prompt-lookup drafting; on a T4 **prompt lookup gives 1.95–2.12×** over gpt2-xl greedy and a gpt2 draft 1.73× (γ=4), while the higher-acceptance gpt2-medium draft is slower |
+| [**medusa-heads-from-scratch**](https://github.com/kishorhange111/medusa-heads-from-scratch) | **Medusa-1** on Qwen2.5-0.5B with its own attention and a **compacting KV cache** — tree-attention verification proven equal to greedy decoding in float64, candidate trees chosen from measured head accuracy (prediction within 3% of measurement); on a T4 a 64-node tree gives **2.00 tokens/step and 1.53× wall clock**. A float16/float32 agreement check caught Qwen's default repetition penalty corrupting the self-distilled data |
 | [**grpo-from-scratch**](https://github.com/kishorhange111/grpo-from-scratch) | **GRPO vs Dr. GRPO** on Qwen2.5-0.5B-Instruct through hand-written LoRA (adapters-off = KL reference, no second model copy) — RL with verifiable arithmetic rewards, resumable across 40-minute GPU sessions. On a T4, **held-out accuracy goes from 0% to 85% in 50 steps**, mostly from learning the answer format, as the README spells out; tests pin the REINFORCE limit, clipping, k3 unbiasedness and each aggregation's length bias |
 | [**sequence-parallel-attention**](https://github.com/kishorhange111/sequence-parallel-attention) | Context parallelism — **ring attention with a hand-written backward** (dK/dV travel with their shard), **zigzag** causal load balancing (1.82× shorter critical path at P = 8) and **DeepSpeed-Ulysses** all-to-all; forward and all gradients exact to 1e-10 on a 4-process group |
 | [**model-parallelism-from-scratch**](https://github.com/kishorhange111/model-parallelism-from-scratch) | **Megatron tensor parallelism** (f/g conjugate ops, column/row-parallel, head-sharded attention, vocab-parallel cross-entropy), **sequence parallelism**, and **GPipe vs 1F1B** pipelines with a bubble simulator — every gradient shard matches single-device training to 1e-10 |
